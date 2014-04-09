@@ -1,0 +1,55 @@
+﻿using System.Linq;
+using System.Xml.Linq;
+using FWCB2014.Import.Core.Services;
+using FWCB2014.Import.Infrastructure.Services;
+using NUnit.Framework;
+
+namespace FWCB2014.Import.Infrastructure.Tests.Services
+{
+  [TestFixture]
+  public class XmlGroupsService_Tests
+  {
+    private IGroupsService _service;
+
+    [SetUp]
+    public void Given_An_XmlGroupsService()
+    {
+      var feed = XElement.Load(@"[TODO]");
+      _service = new XmlGroupsService(feed);
+    }
+
+    [Test]
+    public void It_Should_Be_Able_To_Return_8_Groups()
+    {
+      var groups = _service.GetAll();
+
+      Assert.AreEqual(8, groups.Count());
+    }
+
+    [Test]
+    public void The_Name_Of_The_4th_Group_Is_Group_D()
+    {
+      var groups = _service.GetAll();
+
+      Assert.AreEqual("Group D", groups.Skip(3).Take(1).First().Name);
+    }
+
+    [Test]
+    public void Every_Group_Has_4_Teams()
+    {
+      var groups = _service.GetAll();
+
+      Assert.AreEqual(4, groups.First().Teams.Count());
+    }
+
+    [Test]
+    public void The_Name_Of_The_2nd_Team_In_The_4th_Group_Is_England()
+    {
+      var groups = _service.GetAll();
+
+      var group = groups.Skip(3).Take(1).First();
+
+      Assert.AreEqual("England", group.Teams.Skip(1).Take(1).First().Name);
+    }
+  }
+}

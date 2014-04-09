@@ -1,0 +1,46 @@
+﻿@model IEnumerable<FWCB2014.Domain.Core.Models.Groups.Group>
+
+@{
+  ViewBag.Title = "Groups";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<link href="~/Content/flags/flags.css" rel="stylesheet" />
+
+@foreach (var group in Model.OrderBy(e => e.Name))
+{
+  <h3>@group.Name</h3>
+  <table class="table table-responsive table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Team</th>
+        <th>P</th>
+        <th>W</th>
+        <th>D</th>
+        <th>L</th>
+        <th>S</th>
+        <th>C</th>
+        <th>P</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach (var team in group.Teams.OrderBy(e => e.Position))
+      {
+        <tr>
+          <td>
+            <img src="../../Images/blank.gif" class="flag flag-@team.Code" alt="@team.Name" /> @team.Name
+          </td>
+          <td>@team.Played</td>
+          <td>@team.Won</td>
+          <td>@team.Drawn</td>
+          <td>@team.Lost</td>
+          <td>@team.Scored</td>
+          <td>@team.Conceeded</td>
+          <td>@team.Points</td>
+        </tr>
+      }
+    </tbody>
+    <tfoot></tfoot>
+  </table>
+}
