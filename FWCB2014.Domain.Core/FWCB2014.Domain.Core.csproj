@@ -39,11 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Groups\Group.cs" />
+    <Compile Include="Models\ICountryModel.cs" />
+    <Compile Include="Models\Query\Groups\TeamModel.cs" />
+    <Compile Include="Models\TeamModelBase.cs" />
+    <Compile Include="Models\CountryModel.cs" />
+    <Compile Include="Models\GroupModel.cs" />
     <Compile Include="Models\ICode.cs" />
-    <Compile Include="Models\Groups\Team.cs" />
+    <Compile Include="Models\Command\Groups\TeamModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\IName.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Services\IGroupsService.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

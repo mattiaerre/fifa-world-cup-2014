@@ -1,4 +1,4 @@
-﻿@model IEnumerable<FWCB2014.Domain.Core.Models.Groups.Group>
+﻿@model  IEnumerable<FWCB2014.Domain.Core.Models.GroupModel<FWCB2014.Domain.Core.Models.Query.Groups.TeamModel>>
 
 @{
   ViewBag.Title = "Groups";
@@ -29,7 +29,7 @@
       {
         <tr>
           <td>
-            <img src="../../Images/blank.gif" class="flag flag-@team.Code" alt="@team.Name" /> @team.Name
+            <img src="../../Images/blank.gif" class="flag flag-@team.Country.Alpha2Code.ToLower()" alt="@team.Country.Name" /> @team.Country.Alpha3Code
           </td>
           <td>@team.Played</td>
           <td>@team.Won</td>

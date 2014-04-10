@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Net;
 
-namespace FWCB2014.Core.Infrastructure.Helpers
+namespace FWCB2014.Domain.Infrastructure.Helpers
 {
   public static class HttpHelper
   {

@@ -1,9 +1,8 @@
-﻿namespace FWCB2014.Domain.Core.Models.Groups
+﻿namespace FWCB2014.Domain.Core.Models
 {
-  public class Team : IName, ICode
+  public abstract class TeamModelBase : ICode
   {
-    public string Name { get; set; }
-    public string Code { get; set; }
+    public string Code { get; set; } // info: the code from the data provider e.g. bra_int
     public int Position { get; set; }
     public int Played { get; set; }
     public int Won { get; set; }

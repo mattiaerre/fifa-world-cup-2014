@@ -170,6 +170,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Groups.json" />
     <Content Include="App_Data\Standings_20140405.xml" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -182,6 +183,7 @@
     <Content Include="Images\flags\flags.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="App_Data\Countries.json" />
     <None Include="Properties\PublishProfiles\FWCB2014.WEB.PRD.pubxml" />
     <None Include="Properties\PublishProfiles\FWCB2014.WEB.LOC.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -236,13 +238,13 @@
       <Project>{a23a6819-47f2-4b95-b94e-0f63f248fe98}</Project>
       <Name>FWCB2014.Domain.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FWCB2014.Import.Core\FWCB2014.Import.Core.csproj">
-      <Project>{df4713ae-5991-498e-9a8b-fe2e7c41d682}</Project>
-      <Name>FWCB2014.Import.Core</Name>
+    <ProjectReference Include="..\FWCB2014.Domain.Infrastructure\FWCB2014.Domain.Infrastructure.csproj">
+      <Project>{E5A271F6-0DDB-4AE5-9D46-434F9F3AB478}</Project>
+      <Name>FWCB2014.Domain.Infrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FWCB2014.Import.Infrastructure\FWCB2014.Import.Infrastructure.csproj">
-      <Project>{4675809d-e4ca-474e-8653-a6029ce15d1e}</Project>
-      <Name>FWCB2014.Import.Infrastructure</Name>
+    <ProjectReference Include="..\FWCB2014.Syndication.Infrastructure\FWCB2014.Syndication.Infrastructure.csproj">
+      <Project>{C041ECFB-2988-4DDE-A494-A6018E4664EC}</Project>
+      <Name>FWCB2014.Syndication.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

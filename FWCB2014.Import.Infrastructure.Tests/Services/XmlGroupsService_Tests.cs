@@ -1,20 +1,24 @@
-﻿using System.Linq;
-using System.Xml.Linq;
+﻿using FWCB2014.Domain.Core.Models;
+using FWCB2014.Domain.Core.Models.Command.Groups;
+using FWCB2014.Domain.Core.Services;
 using FWCB2014.Import.Core.Services;
 using FWCB2014.Import.Infrastructure.Services;
+using Newtonsoft.Json;
 using NUnit.Framework;
+using System.Linq;
+using System.Xml.Linq;
 
 namespace FWCB2014.Import.Infrastructure.Tests.Services
 {
   [TestFixture]
   public class XmlGroupsService_Tests
   {
-    private IGroupsService _service;
+    private IGroupsService<GroupModel<TeamModel>> _service;
 
     [SetUp]
     public void Given_An_XmlGroupsService()
     {
-      var feed = XElement.Load(@"[TODO]");
+      var feed = XElement.Load(@"C:\Users\mattia.richetto\Dropbox\dotNet\prj\FWCB2014\FWCB2014.Application.Web\App_Data\Standings_20140405.xml");
       _service = new XmlGroupsService(feed);
     }
 
@@ -22,6 +26,8 @@ namespace FWCB2014.Import.Infrastructure.Tests.Services
     public void It_Should_Be_Able_To_Return_8_Groups()
     {
       var groups = _service.GetAll();
+
+      var json = JsonConvert.SerializeObject(groups);
 
       Assert.AreEqual(8, groups.Count());
     }
@@ -49,7 +55,7 @@ namespace FWCB2014.Import.Infrastructure.Tests.Services
 
       var group = groups.Skip(3).Take(1).First();
 
-      Assert.AreEqual("England", group.Teams.Skip(1).Take(1).First().Name);
+      Assert.AreEqual("eng_int", group.Teams.Skip(1).Take(1).First().Code);
     }
   }
 }
