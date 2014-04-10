@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWCB2014.Syndication.Core",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWCB2014.Syndication.Infrastructure", "FWCB2014.Syndication.Infrastructure\FWCB2014.Syndication.Infrastructure.csproj", "{C041ECFB-2988-4DDE-A494-A6018E4664EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWCB2014.Syndication.Web", "FWCB2014.Syndication.Web\FWCB2014.Syndication.Web.csproj", "{096ABB61-758F-480B-B7A4-5B3C801EE665}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{C041ECFB-2988-4DDE-A494-A6018E4664EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C041ECFB-2988-4DDE-A494-A6018E4664EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C041ECFB-2988-4DDE-A494-A6018E4664EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{096ABB61-758F-480B-B7A4-5B3C801EE665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{096ABB61-758F-480B-B7A4-5B3C801EE665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{096ABB61-758F-480B-B7A4-5B3C801EE665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{096ABB61-758F-480B-B7A4-5B3C801EE665}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,5 +98,6 @@ Global
 		{4C1A1D2C-6F84-431D-9BDF-72340E67037F} = {0CC7CCB3-EB0B-452C-BE49-37641746B33B}
 		{DA41ACA2-9264-49DF-9ECA-C2D2C3B6CC7F} = {C069B914-3246-4EEF-AD52-E86DDC3F7270}
 		{C041ECFB-2988-4DDE-A494-A6018E4664EC} = {C069B914-3246-4EEF-AD52-E86DDC3F7270}
+		{096ABB61-758F-480B-B7A4-5B3C801EE665} = {C069B914-3246-4EEF-AD52-E86DDC3F7270}
 	EndGlobalSection
 EndGlobal
