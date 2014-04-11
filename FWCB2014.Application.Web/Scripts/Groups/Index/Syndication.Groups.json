@@ -1,0 +1,586 @@
+﻿[
+  {
+    "Name": "Group A",
+    "Teams": [
+      {
+        "Country": {
+          "Code": "cro_int",
+          "Name": "Croatia",
+          "Alpha2Code": "HR",
+          "Alpha3Code": "HRV"
+        },
+        "Code": "cro_int",
+        "Position": 1,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "bra_int",
+          "Name": "Brazil",
+          "Alpha2Code": "BR",
+          "Alpha3Code": "BRA"
+        },
+        "Code": "bra_int",
+        "Position": 2,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "mex_int",
+          "Name": "Mexico",
+          "Alpha2Code": "MX",
+          "Alpha3Code": "MEX"
+        },
+        "Code": "mex_int",
+        "Position": 3,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "cam_int",
+          "Name": "Cameroon",
+          "Alpha2Code": "CM",
+          "Alpha3Code": "CMR"
+        },
+        "Code": "cam_int",
+        "Position": 4,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      }
+    ]
+  },
+  {
+    "Name": "Group B",
+    "Teams": [
+      {
+        "Country": {
+          "Code": "ned_int",
+          "Name": "Netherlands",
+          "Alpha2Code": "NL",
+          "Alpha3Code": "NLD"
+        },
+        "Code": "ned_int",
+        "Position": 1,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "spa_int",
+          "Name": "Spain",
+          "Alpha2Code": "ES",
+          "Alpha3Code": "ESP"
+        },
+        "Code": "spa_int",
+        "Position": 2,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "chil_int",
+          "Name": "Chile",
+          "Alpha2Code": "CL",
+          "Alpha3Code": "CHL"
+        },
+        "Code": "chil_int",
+        "Position": 3,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "aus_int",
+          "Name": "Australia",
+          "Alpha2Code": "AU",
+          "Alpha3Code": "AUS"
+        },
+        "Code": "aus_int",
+        "Position": 4,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      }
+    ]
+  },
+  {
+    "Name": "Group C",
+    "Teams": [
+      {
+        "Country": {
+          "Code": "gre_int",
+          "Name": "Greece",
+          "Alpha2Code": "GR",
+          "Alpha3Code": "GRC"
+        },
+        "Code": "gre_int",
+        "Position": 1,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "colomb_int",
+          "Name": "Colombia",
+          "Alpha2Code": "CO",
+          "Alpha3Code": "COL"
+        },
+        "Code": "colomb_int",
+        "Position": 2,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "ivoc_int",
+          "Name": "Ivory Coast",
+          "Alpha2Code": "CI",
+          "Alpha3Code": "CIV"
+        },
+        "Code": "ivoc_int",
+        "Position": 3,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "jap_int",
+          "Name": "Japan",
+          "Alpha2Code": "JP",
+          "Alpha3Code": "JPN"
+        },
+        "Code": "jap_int",
+        "Position": 4,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      }
+    ]
+  },
+  {
+    "Name": "Group D",
+    "Teams": [
+      {
+        "Country": {
+          "Code": "ita_int",
+          "Name": "Italy",
+          "Alpha2Code": "IT",
+          "Alpha3Code": "ITA"
+        },
+        "Code": "ita_int",
+        "Position": 1,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "eng_int",
+          "Name": "England",
+          "Alpha2Code": "England",
+          "Alpha3Code": "ENG"
+        },
+        "Code": "eng_int",
+        "Position": 2,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "uru_int",
+          "Name": "Uruguay",
+          "Alpha2Code": "UY",
+          "Alpha3Code": "URY"
+        },
+        "Code": "uru_int",
+        "Position": 3,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "costric_int",
+          "Name": "Costa Rica",
+          "Alpha2Code": "CR",
+          "Alpha3Code": "CRI"
+        },
+        "Code": "costric_int",
+        "Position": 4,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      }
+    ]
+  },
+  {
+    "Name": "Group E",
+    "Teams": [
+      {
+        "Country": {
+          "Code": "fra_int",
+          "Name": "France",
+          "Alpha2Code": "FR",
+          "Alpha3Code": "FRA"
+        },
+        "Code": "fra_int",
+        "Position": 1,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "swi_int",
+          "Name": "Switzerland",
+          "Alpha2Code": "CH",
+          "Alpha3Code": "CHE"
+        },
+        "Code": "swi_int",
+        "Position": 2,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "ecuad_int",
+          "Name": "Ecuador",
+          "Alpha2Code": "EC",
+          "Alpha3Code": "ECU"
+        },
+        "Code": "ecuad_int",
+        "Position": 3,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "hond_int",
+          "Name": "Honduras",
+          "Alpha2Code": "HN",
+          "Alpha3Code": "HND"
+        },
+        "Code": "hond_int",
+        "Position": 4,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      }
+    ]
+  },
+  {
+    "Name": "Group F",
+    "Teams": [
+      {
+        "Country": {
+          "Code": "bos_int",
+          "Name": "Bosnia and Herzegovina",
+          "Alpha2Code": "BA",
+          "Alpha3Code": "BIH"
+        },
+        "Code": "bos_int",
+        "Position": 1,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "arg_int",
+          "Name": "Argentina",
+          "Alpha2Code": "AR",
+          "Alpha3Code": "ARG"
+        },
+        "Code": "arg_int",
+        "Position": 2,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "nig_int",
+          "Name": "Nigeria",
+          "Alpha2Code": "NG",
+          "Alpha3Code": "NGA"
+        },
+        "Code": "nig_int",
+        "Position": 3,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "iran_int",
+          "Name": "Cook Islands",
+          "Alpha2Code": "CK",
+          "Alpha3Code": "COK"
+        },
+        "Code": "iran_int",
+        "Position": 4,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      }
+    ]
+  },
+  {
+    "Name": "Group G",
+    "Teams": [
+      {
+        "Country": {
+          "Code": "ger_int",
+          "Name": "Germany",
+          "Alpha2Code": "DE",
+          "Alpha3Code": "DEU"
+        },
+        "Code": "ger_int",
+        "Position": 1,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "por_int",
+          "Name": "Portugal",
+          "Alpha2Code": "PT",
+          "Alpha3Code": "PRT"
+        },
+        "Code": "por_int",
+        "Position": 2,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "usa_int",
+          "Name": "United States",
+          "Alpha2Code": "US",
+          "Alpha3Code": "USA"
+        },
+        "Code": "usa_int",
+        "Position": 3,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "gha_int",
+          "Name": "Ghana",
+          "Alpha2Code": "GH",
+          "Alpha3Code": "GHA"
+        },
+        "Code": "gha_int",
+        "Position": 4,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      }
+    ]
+  },
+  {
+    "Name": "Group H",
+    "Teams": [
+      {
+        "Country": {
+          "Code": "rus_int",
+          "Name": "Russia",
+          "Alpha2Code": "RU",
+          "Alpha3Code": "RUS"
+        },
+        "Code": "rus_int",
+        "Position": 1,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "bel_int",
+          "Name": "Belgium",
+          "Alpha2Code": "BE",
+          "Alpha3Code": "BEL"
+        },
+        "Code": "bel_int",
+        "Position": 2,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "alg_int",
+          "Name": "Algeria",
+          "Alpha2Code": "DZ",
+          "Alpha3Code": "DZA"
+        },
+        "Code": "alg_int",
+        "Position": 3,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      },
+      {
+        "Country": {
+          "Code": "korr_int",
+          "Name": "South Korea",
+          "Alpha2Code": "KR",
+          "Alpha3Code": "KOR"
+        },
+        "Code": "korr_int",
+        "Position": 4,
+        "Played": 0,
+        "Won": 0,
+        "Drawn": 0,
+        "Lost": 0,
+        "Scored": 0,
+        "Conceeded": 0,
+        "Points": 0
+      }
+    ]
+  }
+]

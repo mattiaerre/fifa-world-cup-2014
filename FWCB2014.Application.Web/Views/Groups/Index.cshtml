@@ -1,16 +1,17 @@
-﻿@model  IEnumerable<FWCB2014.Domain.Core.Models.GroupModel<FWCB2014.Domain.Core.Models.Query.Groups.TeamModel>>
-
-@{
+﻿@{
   ViewBag.Title = "Groups";
 }
+
+<script src="~/Scripts/Groups/Index/app.js"></script>
 
 <h2>@ViewBag.Title</h2>
 
 <link href="~/Content/flags/flags.css" rel="stylesheet" />
 
-@foreach (var group in Model.OrderBy(e => e.Name))
-{
-  <h3>@group.Name</h3>
+<div data-bind="template: { name: 'groups-template', foreach: $data }"></div>
+
+<script type="text/html" id="groups-template">
+  <h3 data-bind="text: Name"></h3>
   <table class="table table-responsive table-bordered table-striped">
     <thead>
       <tr>
@@ -24,23 +25,24 @@
         <th>P</th>
       </tr>
     </thead>
-    <tbody>
-      @foreach (var team in group.Teams.OrderBy(e => e.Position))
-      {
-        <tr>
-          <td>
-            <img src="../../Images/blank.gif" class="flag flag-@team.Country.Alpha2Code.ToLower()" alt="@team.Country.Name" /> @team.Country.Alpha3Code
-          </td>
-          <td>@team.Played</td>
-          <td>@team.Won</td>
-          <td>@team.Drawn</td>
-          <td>@team.Lost</td>
-          <td>@team.Scored</td>
-          <td>@team.Conceeded</td>
-          <td>@team.Points</td>
-        </tr>
-      }
-    </tbody>
+    <tbody data-bind="template: { name: 'group-template', foreach: Teams }"></tbody>
     <tfoot></tfoot>
   </table>
-}
+
+</script>
+
+<script type="text/html" id="group-template">
+  <tr>
+    <td>
+      <img src="../../Images/blank.gif" data-bind="attr: { class : 'flag flag-' + Country.Alpha2Code.toLowerCase(), alt : Country.Name }" alt="" />
+      <span data-bind="text: Country.Alpha3Code"></span>
+    </td>
+    <td data-bind="text: Played"></td>
+    <td data-bind="text: Won"></td>
+    <td data-bind="text: Drawn"></td>
+    <td data-bind="text: Lost"></td>
+    <td data-bind="text: Scored"></td>
+    <td data-bind="text: Conceeded"></td>
+    <td data-bind="text: Points"></td>
+  </tr>
+</script>

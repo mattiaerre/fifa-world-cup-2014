@@ -9,8 +9,7 @@ namespace FWCB2014.Syndication.Web.Controllers
   public class GroupsController : ApiController
   {
     private readonly IGroupsService<GroupModel<TeamModel>> _service;
-
-
+    
     public GroupsController(IGroupsService<GroupModel<TeamModel>> service)
     {
       _service = service;
