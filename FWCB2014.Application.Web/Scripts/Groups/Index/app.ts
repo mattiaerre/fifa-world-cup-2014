@@ -1,7 +1,7 @@
 $(document).ready(() => {
   $.ajax({
     type: 'GET',
-    url: '/Scripts/Groups/Index/Syndication.Groups.json',
+    url: 'http://fwcb2014-syndication.azurewebsites.net/api/groups',
     data: {},
     dataType: 'json',
     success: (data) => {

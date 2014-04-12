@@ -21,7 +21,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <TypeScriptToolsVersion>0.9</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -195,6 +195,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App_Data\Countries.json" />
     <Content Include="Scripts\Groups\Index\Syndication.Groups.json" />
+    <None Include="Properties\PublishProfiles\FWCB2014.WEB.CLOUD.PRD.pubxml" />
     <None Include="Properties\PublishProfiles\FWCB2014.WEB.PRD.pubxml" />
     <None Include="Properties\PublishProfiles\FWCB2014.WEB.LOC.pubxml" />
     <Content Include="Scripts\Groups\Index\app.js.map" />
