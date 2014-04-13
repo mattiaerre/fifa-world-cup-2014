@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-using FWCB2014.Domain.Core.Models;
+﻿using FWCB2014.Domain.Core.Models;
 using FWCB2014.Domain.Infrastructure.Helpers;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Xml.Linq;
 
 namespace FWCB2014.Import.Infrastructure.Tests.Spikes.Countries
 {
@@ -29,9 +27,10 @@ namespace FWCB2014.Import.Infrastructure.Tests.Spikes.Countries
     }
 
     [Test]
+    [Explicit]
     public void List_Of_Countries()
     {
-      var data = XElement.Load(@"C:\Users\mattia.richetto\Dropbox\dotNet\prj\FWCB2014\FWCB2014.Application.Web\App_Data\Standings_20140405.xml");
+      var data = XElement.Load(@"C:\Users\mattiaerre\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web\App_Data\Standings_20140405.xml");
 
       var teams = data.Descendants("team").Select(e => new { Code = e.Attribute("id").Value, Name = e.Descendants("name").First().Value.ToLower() });
 
@@ -53,15 +52,16 @@ namespace FWCB2014.Import.Infrastructure.Tests.Spikes.Countries
       });
 
       var json = JsonConvert.SerializeObject(countries.OrderBy(e => e.Code));
+
+      File.WriteAllText(@"C:\Users\mattiaerre\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web\App_Data\Countries.json", json);
     }
 
     private static CountryModel GetCountry(string countryName)
     {
       var uri = string.Format("http://restcountries.eu/rest/v1/name/{0}", countryName);
 
-      //var uri = string.Format("http://restcountries.eu/rest/v1/alpha/{0}", countryAlpha3Code);
       var response = HttpHelper.HttpGet(uri);
-      var country = JArray.Parse(response).First();
+      var country = countryName == "iran" ? JArray.Parse(response).Skip(1).Take(1).First() : JArray.Parse(response).First();
 
       var name = country.Children<JProperty>().First(e => e.Name == "name").Value.ToString();
       var alpha2Code = country.Children<JProperty>().First(e => e.Name == "alpha2Code").Value.ToString();

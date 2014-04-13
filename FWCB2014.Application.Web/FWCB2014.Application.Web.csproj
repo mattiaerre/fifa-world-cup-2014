@@ -180,8 +180,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Groups.json" />
-    <Content Include="App_Data\Standings_20140405.xml" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\flags\flags.css" />
@@ -193,10 +191,8 @@
     <Content Include="Images\flags\flags.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="App_Data\Countries.json" />
     <Content Include="Scripts\Groups\Index\Syndication.Groups.json" />
     <None Include="Properties\PublishProfiles\FWCB2014.WEB.CLOUD.PRD.pubxml" />
-    <None Include="Properties\PublishProfiles\FWCB2014.WEB.PRD.pubxml" />
     <None Include="Properties\PublishProfiles\FWCB2014.WEB.LOC.pubxml" />
     <Content Include="Scripts\Groups\Index\app.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -252,6 +248,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -5,6 +5,7 @@ using FWCB2014.Domain.Core.Services;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace FWCB2014.Syndication.Infrastructure.Services
 {
@@ -32,7 +33,7 @@ namespace FWCB2014.Syndication.Infrastructure.Services
           team.Country = country;
         }
       }
-      return groups;
+      return groups.OrderBy(e => e.Name).ThenBy(e => e.Teams.OrderBy(t => t.Position));
     }
   }
 }

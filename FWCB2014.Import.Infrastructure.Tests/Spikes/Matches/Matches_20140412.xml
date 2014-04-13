@@ -1,0 +1,1461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xslf:livescore-feed xsi:schemaLocation="http://xmlscores.com/XSLF http://xmlscores.com/schemas/2/matches.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xslf="http://xmlscores.com/XSLF" timestamp-created="1397424276">
+  <matches total-count="64" first="1" last="64">
+    <item contest="wc_2014" id="497e52f0581dea4efcd45f1dcd2d1556" status="not_started" timestamp-starts="1402603200">
+      <teams>
+        <hosts id="bra_int">
+          <name>Brazil</name>
+          <fullname>Brazil</fullname>
+        </hosts>
+        <guests id="cro_int">
+          <name>Croatia</name>
+          <fullname>Croatia</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>1</fixture-info>
+        <group-id>A</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="a881c1ae9a114c66044323904a708f82" status="not_started" timestamp-starts="1402675200">
+      <teams>
+        <hosts id="mex_int">
+          <name>Mexico</name>
+          <fullname>Mexico</fullname>
+        </hosts>
+        <guests id="cam_int">
+          <name>Cameroon</name>
+          <fullname>Cameroon</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>1</fixture-info>
+        <group-id>A</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="cb07609fc06300ec7aa22eb7e7da39d9" status="not_started" timestamp-starts="1402686000">
+      <teams>
+        <hosts id="spa_int">
+          <name>Spain</name>
+          <fullname>Spain</fullname>
+        </hosts>
+        <guests id="ned_int">
+          <name>Netherlands</name>
+          <fullname>Netherlands</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>1</fixture-info>
+        <group-id>B</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="fdeb662c644f610e32b6c87ca5ecd6a4" status="not_started" timestamp-starts="1402696800">
+      <teams>
+        <hosts id="chil_int">
+          <name>Chile</name>
+          <fullname>Chile</fullname>
+        </hosts>
+        <guests id="aus_int">
+          <name>Australia</name>
+          <fullname>Australia</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>1</fixture-info>
+        <group-id>B</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="51e3fb34a0495f9e33c2c141aef74442" status="not_started" timestamp-starts="1402761600">
+      <teams>
+        <hosts id="colomb_int">
+          <name>Colombia</name>
+          <fullname>Colombia</fullname>
+        </hosts>
+        <guests id="gre_int">
+          <name>Greece</name>
+          <fullname>Greece</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>1</fixture-info>
+        <group-id>C</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="760d7479838e03b1eca8379704705bea" status="not_started" timestamp-starts="1402772400">
+      <teams>
+        <hosts id="uru_int">
+          <name>Uruguay</name>
+          <fullname>Uruguay</fullname>
+        </hosts>
+        <guests id="costric_int">
+          <name>Costa Rica</name>
+          <fullname>Costa Rica</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>1</fixture-info>
+        <group-id>D</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="655b8bd49419da2fe246f88efcf7b7ba" status="not_started" timestamp-starts="1402783200">
+      <teams>
+        <hosts id="eng_int">
+          <name>England</name>
+          <fullname>England</fullname>
+        </hosts>
+        <guests id="ita_int">
+          <name>Italy</name>
+          <fullname>Italy</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>1</fixture-info>
+        <group-id>D</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="ae786c85711f3cc2c1545d7a69501c46" status="not_started" timestamp-starts="1402794000">
+      <teams>
+        <hosts id="ivoc_int">
+          <name>Côte d&#039;Ivoire</name>
+          <fullname>Côte d&#039;Ivoire</fullname>
+        </hosts>
+        <guests id="jap_int">
+          <name>Japan</name>
+          <fullname>Japan</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>1</fixture-info>
+        <group-id>C</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="717be59872bf8468858b0277b6971b0c" status="not_started" timestamp-starts="1402848000">
+      <teams>
+        <hosts id="swi_int">
+          <name>Switzerland</name>
+          <fullname>Switzerland</fullname>
+        </hosts>
+        <guests id="ecuad_int">
+          <name>Ecuador</name>
+          <fullname>Ecuador</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>1</fixture-info>
+        <group-id>E</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="cc6aee7986e767c6c0da5cf6d166a034" status="not_started" timestamp-starts="1402858800">
+      <teams>
+        <hosts id="fra_int">
+          <name>France</name>
+          <fullname>France</fullname>
+        </hosts>
+        <guests id="hond_int">
+          <name>Honduras</name>
+          <fullname>Honduras</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>1</fixture-info>
+        <group-id>E</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="528a78dcc904ff54f139fabe787ab67f" status="not_started" timestamp-starts="1402869600">
+      <teams>
+        <hosts id="arg_int">
+          <name>Argentina</name>
+          <fullname>Argentina</fullname>
+        </hosts>
+        <guests id="bos_int">
+          <name>Bosnia-Herzegovina</name>
+          <fullname>Bosnia-Herzegovina</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>1</fixture-info>
+        <group-id>F</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="6b63504ed07cee7c6eae979bd0ad50c8" status="not_started" timestamp-starts="1402934400">
+      <teams>
+        <hosts id="ger_int">
+          <name>Germany</name>
+          <fullname>Germany</fullname>
+        </hosts>
+        <guests id="por_int">
+          <name>Portugal</name>
+          <fullname>Portugal</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>1</fixture-info>
+        <group-id>G</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="c6c08bd995c95f78f139ddff984e205d" status="not_started" timestamp-starts="1402945200">
+      <teams>
+        <hosts id="iran_int">
+          <name>Iran</name>
+          <fullname>Iran</fullname>
+        </hosts>
+        <guests id="nig_int">
+          <name>Nigeria</name>
+          <fullname>Nigeria</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>1</fixture-info>
+        <group-id>F</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="67e4df6474a1c37f71c4f6a12b45690c" status="not_started" timestamp-starts="1402956000">
+      <teams>
+        <hosts id="gha_int">
+          <name>Ghana</name>
+          <fullname>Ghana</fullname>
+        </hosts>
+        <guests id="usa_int">
+          <name>USA</name>
+          <fullname>USA</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>1</fixture-info>
+        <group-id>G</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="25500209eb5aa07f61ff830e2f96c0f5" status="not_started" timestamp-starts="1403020800">
+      <teams>
+        <hosts id="bel_int">
+          <name>Belgium</name>
+          <fullname>Belgium</fullname>
+        </hosts>
+        <guests id="alg_int">
+          <name>Algeria</name>
+          <fullname>Algeria</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>1</fixture-info>
+        <group-id>H</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="cc39d777014b119863ec208990c93cff" status="not_started" timestamp-starts="1403031600">
+      <teams>
+        <hosts id="bra_int">
+          <name>Brazil</name>
+          <fullname>Brazil</fullname>
+        </hosts>
+        <guests id="mex_int">
+          <name>Mexico</name>
+          <fullname>Mexico</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>2</fixture-info>
+        <group-id>A</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="c7a2bd6e5ff9dc6b581427606540e1c6" status="not_started" timestamp-starts="1403042400">
+      <teams>
+        <hosts id="rus_int">
+          <name>Russia</name>
+          <fullname>Russia</fullname>
+        </hosts>
+        <guests id="korr_int">
+          <name>South Korea</name>
+          <fullname>Korea Republic</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>1</fixture-info>
+        <group-id>H</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="51e28499e30a4b79e0ac03e900af13eb" status="not_started" timestamp-starts="1403107200">
+      <teams>
+        <hosts id="aus_int">
+          <name>Australia</name>
+          <fullname>Australia</fullname>
+        </hosts>
+        <guests id="ned_int">
+          <name>Netherlands</name>
+          <fullname>Netherlands</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>2</fixture-info>
+        <group-id>B</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="48bd3fa62513044a51e44e3546b9c86f" status="not_started" timestamp-starts="1403118000">
+      <teams>
+        <hosts id="spa_int">
+          <name>Spain</name>
+          <fullname>Spain</fullname>
+        </hosts>
+        <guests id="chil_int">
+          <name>Chile</name>
+          <fullname>Chile</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>2</fixture-info>
+        <group-id>B</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="2ab842c75026cc924e08bd1802bd383e" status="not_started" timestamp-starts="1403128800">
+      <teams>
+        <hosts id="cam_int">
+          <name>Cameroon</name>
+          <fullname>Cameroon</fullname>
+        </hosts>
+        <guests id="cro_int">
+          <name>Croatia</name>
+          <fullname>Croatia</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>2</fixture-info>
+        <group-id>A</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="a8da01dd1f70a4b0fc28ec9a50190e3e" status="not_started" timestamp-starts="1403193600">
+      <teams>
+        <hosts id="colomb_int">
+          <name>Colombia</name>
+          <fullname>Colombia</fullname>
+        </hosts>
+        <guests id="ivoc_int">
+          <name>Côte d&#039;Ivoire</name>
+          <fullname>Côte d&#039;Ivoire</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>2</fixture-info>
+        <group-id>C</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="b271250f17315692d9c390d0f8857b67" status="not_started" timestamp-starts="1403204400">
+      <teams>
+        <hosts id="uru_int">
+          <name>Uruguay</name>
+          <fullname>Uruguay</fullname>
+        </hosts>
+        <guests id="eng_int">
+          <name>England</name>
+          <fullname>England</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>2</fixture-info>
+        <group-id>D</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="558c7277635c2a2b40bbdc229a39a8cd" status="not_started" timestamp-starts="1403215200">
+      <teams>
+        <hosts id="jap_int">
+          <name>Japan</name>
+          <fullname>Japan</fullname>
+        </hosts>
+        <guests id="gre_int">
+          <name>Greece</name>
+          <fullname>Greece</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>2</fixture-info>
+        <group-id>C</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="a17cae15e74e2c454252514ac9fad5f5" status="not_started" timestamp-starts="1403280000">
+      <teams>
+        <hosts id="ita_int">
+          <name>Italy</name>
+          <fullname>Italy</fullname>
+        </hosts>
+        <guests id="costric_int">
+          <name>Costa Rica</name>
+          <fullname>Costa Rica</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>2</fixture-info>
+        <group-id>D</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="4a23fc7f21be911ab6dbc982302e6484" status="not_started" timestamp-starts="1403290800">
+      <teams>
+        <hosts id="swi_int">
+          <name>Switzerland</name>
+          <fullname>Switzerland</fullname>
+        </hosts>
+        <guests id="fra_int">
+          <name>France</name>
+          <fullname>France</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>2</fixture-info>
+        <group-id>E</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="bbae0c906bc956030331676a4184456f" status="not_started" timestamp-starts="1403301600">
+      <teams>
+        <hosts id="hond_int">
+          <name>Honduras</name>
+          <fullname>Honduras</fullname>
+        </hosts>
+        <guests id="ecuad_int">
+          <name>Ecuador</name>
+          <fullname>Ecuador</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>2</fixture-info>
+        <group-id>E</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="fa52bf8544d3002c493a7b05ed711bbb" status="not_started" timestamp-starts="1403366400">
+      <teams>
+        <hosts id="arg_int">
+          <name>Argentina</name>
+          <fullname>Argentina</fullname>
+        </hosts>
+        <guests id="iran_int">
+          <name>Iran</name>
+          <fullname>Iran</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>2</fixture-info>
+        <group-id>F</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="cc9fb5f17c464436a4d05e72d62347d2" status="not_started" timestamp-starts="1403377200">
+      <teams>
+        <hosts id="ger_int">
+          <name>Germany</name>
+          <fullname>Germany</fullname>
+        </hosts>
+        <guests id="gha_int">
+          <name>Ghana</name>
+          <fullname>Ghana</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>2</fixture-info>
+        <group-id>G</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="0828be2d5a2d9d7bbf9e69e41fc3bef8" status="not_started" timestamp-starts="1403388000">
+      <teams>
+        <hosts id="nig_int">
+          <name>Nigeria</name>
+          <fullname>Nigeria</fullname>
+        </hosts>
+        <guests id="bos_int">
+          <name>Bosnia-Herzegovina</name>
+          <fullname>Bosnia-Herzegovina</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>2</fixture-info>
+        <group-id>F</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="58e9bb6f00e761bdeeaa49fb3c058375" status="not_started" timestamp-starts="1403452800">
+      <teams>
+        <hosts id="bel_int">
+          <name>Belgium</name>
+          <fullname>Belgium</fullname>
+        </hosts>
+        <guests id="rus_int">
+          <name>Russia</name>
+          <fullname>Russia</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>2</fixture-info>
+        <group-id>H</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="459e05c8aa5bf6363e04f95d7dfbc3f1" status="not_started" timestamp-starts="1403463600">
+      <teams>
+        <hosts id="korr_int">
+          <name>South Korea</name>
+          <fullname>Korea Republic</fullname>
+        </hosts>
+        <guests id="alg_int">
+          <name>Algeria</name>
+          <fullname>Algeria</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>2</fixture-info>
+        <group-id>H</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="21498030fea48b838d2e3e255e6eca2a" status="not_started" timestamp-starts="1403474400">
+      <teams>
+        <hosts id="usa_int">
+          <name>USA</name>
+          <fullname>USA</fullname>
+        </hosts>
+        <guests id="por_int">
+          <name>Portugal</name>
+          <fullname>Portugal</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>2</fixture-info>
+        <group-id>G</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="1a45c5df3b86c6fd6e27768b394a1762" status="not_started" timestamp-starts="1403539200">
+      <teams>
+        <hosts id="aus_int">
+          <name>Australia</name>
+          <fullname>Australia</fullname>
+        </hosts>
+        <guests id="spa_int">
+          <name>Spain</name>
+          <fullname>Spain</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>3</fixture-info>
+        <group-id>B</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="3fc2f318583e84cef1ba05b27ebac2db" status="not_started" timestamp-starts="1403539200">
+      <teams>
+        <hosts id="ned_int">
+          <name>Netherlands</name>
+          <fullname>Netherlands</fullname>
+        </hosts>
+        <guests id="chil_int">
+          <name>Chile</name>
+          <fullname>Chile</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>3</fixture-info>
+        <group-id>B</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="144b2fc855ae0992f15963c8600d2edc" status="not_started" timestamp-starts="1403553600">
+      <teams>
+        <hosts id="cam_int">
+          <name>Cameroon</name>
+          <fullname>Cameroon</fullname>
+        </hosts>
+        <guests id="bra_int">
+          <name>Brazil</name>
+          <fullname>Brazil</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>3</fixture-info>
+        <group-id>A</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="e271a7ec5da95ab97f5e8c71fa8e20de" status="not_started" timestamp-starts="1403553600">
+      <teams>
+        <hosts id="cro_int">
+          <name>Croatia</name>
+          <fullname>Croatia</fullname>
+        </hosts>
+        <guests id="mex_int">
+          <name>Mexico</name>
+          <fullname>Mexico</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>3</fixture-info>
+        <group-id>A</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="c4b2b133ae5f0a5ffbbfd9479b71c86a" status="not_started" timestamp-starts="1403625600">
+      <teams>
+        <hosts id="costric_int">
+          <name>Costa Rica</name>
+          <fullname>Costa Rica</fullname>
+        </hosts>
+        <guests id="eng_int">
+          <name>England</name>
+          <fullname>England</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>3</fixture-info>
+        <group-id>D</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="86299298aa9f9401d601b211fed26e35" status="not_started" timestamp-starts="1403625600">
+      <teams>
+        <hosts id="ita_int">
+          <name>Italy</name>
+          <fullname>Italy</fullname>
+        </hosts>
+        <guests id="uru_int">
+          <name>Uruguay</name>
+          <fullname>Uruguay</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>3</fixture-info>
+        <group-id>D</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="4ba160b7b91a4883d6172af3e066b372" status="not_started" timestamp-starts="1403640000">
+      <teams>
+        <hosts id="gre_int">
+          <name>Greece</name>
+          <fullname>Greece</fullname>
+        </hosts>
+        <guests id="ivoc_int">
+          <name>Côte d&#039;Ivoire</name>
+          <fullname>Côte d&#039;Ivoire</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>3</fixture-info>
+        <group-id>C</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="a6bbc6b39223d0f98f58e80cb7e42cdd" status="not_started" timestamp-starts="1403640000">
+      <teams>
+        <hosts id="jap_int">
+          <name>Japan</name>
+          <fullname>Japan</fullname>
+        </hosts>
+        <guests id="colomb_int">
+          <name>Colombia</name>
+          <fullname>Colombia</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>3</fixture-info>
+        <group-id>C</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="8c0734d5f6247d06aedcd8164b1319fd" status="not_started" timestamp-starts="1403712000">
+      <teams>
+        <hosts id="bos_int">
+          <name>Bosnia-Herzegovina</name>
+          <fullname>Bosnia-Herzegovina</fullname>
+        </hosts>
+        <guests id="iran_int">
+          <name>Iran</name>
+          <fullname>Iran</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>3</fixture-info>
+        <group-id>F</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="ca7c0c8384facaa284dfed2c9efb83ed" status="not_started" timestamp-starts="1403712000">
+      <teams>
+        <hosts id="nig_int">
+          <name>Nigeria</name>
+          <fullname>Nigeria</fullname>
+        </hosts>
+        <guests id="arg_int">
+          <name>Argentina</name>
+          <fullname>Argentina</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>3</fixture-info>
+        <group-id>F</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="505eda28169851c6a0232cf66b41e9ea" status="not_started" timestamp-starts="1403726400">
+      <teams>
+        <hosts id="ecuad_int">
+          <name>Ecuador</name>
+          <fullname>Ecuador</fullname>
+        </hosts>
+        <guests id="fra_int">
+          <name>France</name>
+          <fullname>France</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>3</fixture-info>
+        <group-id>E</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="6512c1371292719b306aedb1a6fda40a" status="not_started" timestamp-starts="1403726400">
+      <teams>
+        <hosts id="hond_int">
+          <name>Honduras</name>
+          <fullname>Honduras</fullname>
+        </hosts>
+        <guests id="swi_int">
+          <name>Switzerland</name>
+          <fullname>Switzerland</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>3</fixture-info>
+        <group-id>E</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="b80dfdeabe0ef12161e812ac7a1eefda" status="not_started" timestamp-starts="1403798400">
+      <teams>
+        <hosts id="por_int">
+          <name>Portugal</name>
+          <fullname>Portugal</fullname>
+        </hosts>
+        <guests id="gha_int">
+          <name>Ghana</name>
+          <fullname>Ghana</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>3</fixture-info>
+        <group-id>G</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="dd6f5c4943c4f4661b2041d8ce40a4ba" status="not_started" timestamp-starts="1403798400">
+      <teams>
+        <hosts id="usa_int">
+          <name>USA</name>
+          <fullname>USA</fullname>
+        </hosts>
+        <guests id="ger_int">
+          <name>Germany</name>
+          <fullname>Germany</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>3</fixture-info>
+        <group-id>G</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="37600c56b78ebf01f270719eaca7ff39" status="not_started" timestamp-starts="1403812800">
+      <teams>
+        <hosts id="alg_int">
+          <name>Algeria</name>
+          <fullname>Algeria</fullname>
+        </hosts>
+        <guests id="rus_int">
+          <name>Russia</name>
+          <fullname>Russia</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>3</fixture-info>
+        <group-id>H</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="93d5fbe106e5e2fc1967ff8a7dc5a70e" status="not_started" timestamp-starts="1403812800">
+      <teams>
+        <hosts id="korr_int">
+          <name>South Korea</name>
+          <fullname>Korea Republic</fullname>
+        </hosts>
+        <guests id="bel_int">
+          <name>Belgium</name>
+          <fullname>Belgium</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>3</fixture-info>
+        <group-id>H</group-id>
+      </details>
+    </item>
+    <item contest="wc_2014" id="17489099cb7a1148521f90a610d90ae4" status="not_started" timestamp-starts="1403971200">
+      <teams>
+        <hosts id="A1">
+          <name>A1</name>
+          <fullname>A1</fullname>
+        </hosts>
+        <guests id="B2">
+          <name>B2</name>
+          <fullname>B2</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>Round of 16</fixture-info>
+      </details>
+    </item>
+    <item contest="wc_2014" id="74f5b8cb57693334cf850baa1e8100c2" status="not_started" timestamp-starts="1403985600">
+      <teams>
+        <hosts id="C1">
+          <name>C1</name>
+          <fullname>C1</fullname>
+        </hosts>
+        <guests id="D2">
+          <name>D2</name>
+          <fullname>D2</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>Round of 16</fixture-info>
+      </details>
+    </item>
+    <item contest="wc_2014" id="67004bf556f7283d78651c30b54da995" status="not_started" timestamp-starts="1404057600">
+      <teams>
+        <hosts id="B1">
+          <name>B1</name>
+          <fullname>B1</fullname>
+        </hosts>
+        <guests id="A2">
+          <name>A2</name>
+          <fullname>A2</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>Round of 16</fixture-info>
+      </details>
+    </item>
+    <item contest="wc_2014" id="f2d7ac79c04b1cd56712467363855ecc" status="not_started" timestamp-starts="1404072000">
+      <teams>
+        <hosts id="D1">
+          <name>D1</name>
+          <fullname>D1</fullname>
+        </hosts>
+        <guests id="C2">
+          <name>C2</name>
+          <fullname>C2</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>Round of 16</fixture-info>
+      </details>
+    </item>
+    <item contest="wc_2014" id="1cc1c1bc69124ba57f1810b68f0aa055" status="not_started" timestamp-starts="1404144000">
+      <teams>
+        <hosts id="E1">
+          <name>E1</name>
+          <fullname>E1</fullname>
+        </hosts>
+        <guests id="F2">
+          <name>F2</name>
+          <fullname>F2</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>Round of 16</fixture-info>
+      </details>
+    </item>
+    <item contest="wc_2014" id="ff1904b8f44752b9ec472d72d5753019" status="not_started" timestamp-starts="1404158400">
+      <teams>
+        <hosts id="G1">
+          <name>G1</name>
+          <fullname>G1</fullname>
+        </hosts>
+        <guests id="H2">
+          <name>H2</name>
+          <fullname>H2</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>Round of 16</fixture-info>
+      </details>
+    </item>
+    <item contest="wc_2014" id="5dcb1cfdd8b7518f8803621a2ea6535a" status="not_started" timestamp-starts="1404230400">
+      <teams>
+        <hosts id="F1">
+          <name>F1</name>
+          <fullname>F1</fullname>
+        </hosts>
+        <guests id="E2">
+          <name>E2</name>
+          <fullname>E2</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>Round of 16</fixture-info>
+      </details>
+    </item>
+    <item contest="wc_2014" id="aea60b2c573036fb31acfcce8b10f0c3" status="not_started" timestamp-starts="1404244800">
+      <teams>
+        <hosts id="H1">
+          <name>H1</name>
+          <fullname>H1</fullname>
+        </hosts>
+        <guests id="G2">
+          <name>G2</name>
+          <fullname>G2</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>Round of 16</fixture-info>
+      </details>
+    </item>
+    <item contest="wc_2014" id="9243443b64b12f6af2d305c073d47a45" status="not_started" timestamp-starts="1404489600">
+      <teams>
+        <hosts id="E1F2">
+          <name>E1F2</name>
+          <fullname>E1F2</fullname>
+        </hosts>
+        <guests id="G1H2">
+          <name>G1H2</name>
+          <fullname>G1H2</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>Quarter-final</fixture-info>
+      </details>
+    </item>
+    <item contest="wc_2014" id="df39e4cd3fe4af8be31f6fa8ddef5c28" status="not_started" timestamp-starts="1404504000">
+      <teams>
+        <hosts id="A1B2">
+          <name>A1B2</name>
+          <fullname>A1B2</fullname>
+        </hosts>
+        <guests id="C1D2">
+          <name>C1D2</name>
+          <fullname>C1D2</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>Quarter-final</fixture-info>
+      </details>
+    </item>
+    <item contest="wc_2014" id="657169238376e72b30379019ed1d3d3b" status="not_started" timestamp-starts="1404576000">
+      <teams>
+        <hosts id="F1E2">
+          <name>F1E2</name>
+          <fullname>F1E2</fullname>
+        </hosts>
+        <guests id="H1G2">
+          <name>H1G2</name>
+          <fullname>H1G2</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>Quarter-final</fixture-info>
+      </details>
+    </item>
+    <item contest="wc_2014" id="6af08c71aad2ff232ff1175d873cd67f" status="not_started" timestamp-starts="1404590400">
+      <teams>
+        <hosts id="B1A2">
+          <name>B1A2</name>
+          <fullname>B1A2</fullname>
+        </hosts>
+        <guests id="D1C2">
+          <name>D1C2</name>
+          <fullname>D1C2</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>Quarter-final</fixture-info>
+      </details>
+    </item>
+    <item contest="wc_2014" id="2de71107ad37a6dfb66e1add869e52c6" status="not_started" timestamp-starts="1404849600">
+      <teams>
+        <hosts id="A1B2C1D2">
+          <name>A1B2C1D2</name>
+          <fullname>A1B2C1D2</fullname>
+        </hosts>
+        <guests id="E1F2G1H2">
+          <name>E1F2G1H2</name>
+          <fullname>E1F2G1H2</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>Semi-final</fixture-info>
+      </details>
+    </item>
+    <item contest="wc_2014" id="c6395721f3176f0db50ea0eac25f7451" status="not_started" timestamp-starts="1404936000">
+      <teams>
+        <hosts id="B1A2D1C2">
+          <name>B1A2D1C2</name>
+          <fullname>B1A2D1C2</fullname>
+        </hosts>
+        <guests id="F1E2H1G2">
+          <name>F1E2H1G2</name>
+          <fullname>F1E2H1G2</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>Semi-final</fixture-info>
+      </details>
+    </item>
+    <item contest="wc_2014" id="d36e8c4a05a38c0282a6d4028926027c" status="not_started" timestamp-starts="1405195200">
+      <teams>
+        <hosts id="Team 3">
+          <name>Team 3</name>
+          <fullname>Team 3</fullname>
+        </hosts>
+        <guests id="Team 4">
+          <name>Team 4</name>
+          <fullname>Team 4</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>Match for 3-rd place</fixture-info>
+      </details>
+    </item>
+    <item contest="wc_2014" id="7b85405eeccd3827c7fcaf2ba5689371" status="not_started" timestamp-starts="1405278000">
+      <teams>
+        <hosts id="Team 1">
+          <name>Team 1</name>
+          <fullname>Team 1</fullname>
+        </hosts>
+        <guests id="Team 2">
+          <name>Team 2</name>
+          <fullname>Team 2</fullname>
+        </guests>
+      </teams>
+      <score>0 - 0</score>
+      <details>
+        <contest>
+          <competition id="wc_2014">
+            <title>wc_2014</title>
+          </competition>
+          <season>2014</season>
+        </contest>
+        <fixture-info>Final</fixture-info>
+      </details>
+    </item>
+  </matches>
+</xslf:livescore-feed>
