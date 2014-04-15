@@ -22,10 +22,10 @@ namespace FWCB2014.Import.Infrastructure.Tests.Spikes.Matches
     [Ignore]
     public void I_Should_Be_Able_To_Get_All_The_Matches()
     {
-      var url = string.Format("http://api.xmlscores.com/matches/?f=xml&c=wc_2014&open={0}&t1=1&l=128", ApiKey);
+      var url = string.Format("http://api.xmlscores.com/matches/?f=xml&c=wc_2014&open={0}&t1=1&l=128&e=1", ApiKey);
       var feed = HttpGet(url);
 
-      File.WriteAllText(string.Format(@"C:\Users\mattiaerre\Source\Repos\fifa-world-cup-2014\FWCB2014.Import.Infrastructure.Tests\Spikes\Matches\Matches_{0}.xml", "20140412"), feed, Encoding.UTF8);
+      File.WriteAllText(string.Format(@"C:\Users\mattiaerre\Source\Repos\fifa-world-cup-2014\FWCB2014.Import.Infrastructure.Tests\Spikes\Matches\Matches_{0}.xml", "20140415"), feed, Encoding.UTF8);
 
       Assert.IsNotNull(feed);
     }
