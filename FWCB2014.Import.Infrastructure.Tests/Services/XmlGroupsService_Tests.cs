@@ -1,10 +1,10 @@
-﻿using System.IO;
-using FWCB2014.Domain.Core.Models;
-using FWCB2014.Domain.Core.Models.Command.Groups;
+﻿using FWCB2014.Domain.Core.Models;
+using FWCB2014.Domain.Core.Models.Command.Standings;
 using FWCB2014.Domain.Core.Services;
 using FWCB2014.Import.Infrastructure.Services;
 using Newtonsoft.Json;
 using NUnit.Framework;
+using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 
@@ -13,7 +13,7 @@ namespace FWCB2014.Import.Infrastructure.Tests.Services
   [TestFixture]
   public class XmlGroupsService_Tests
   {
-    private IGroupsService<GroupModel<TeamModel>> _service;
+    private IGroupsService<GroupModel<StandingModel>> _service;
 
     [SetUp]
     public void Given_An_XmlGroupsService()

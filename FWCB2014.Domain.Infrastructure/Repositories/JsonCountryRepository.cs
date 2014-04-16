@@ -7,12 +7,12 @@ using System.Linq;
 
 namespace FWCB2014.Domain.Infrastructure.Repositories
 {
-  public class JsonCountryRepository : IRepository<CountryModel>
+  public class JsonCountryRepository : IRepository<TeamModel>
   {
     private readonly string _jsonPath;
 
-    private IEnumerable<CountryModel> _countries;
-    private IEnumerable<CountryModel> Countries
+    private IEnumerable<TeamModel> _countries;
+    private IEnumerable<TeamModel> Countries
     {
       get
       {
@@ -22,10 +22,10 @@ namespace FWCB2014.Domain.Infrastructure.Repositories
       }
     }
 
-    private IEnumerable<CountryModel> GetCountries()
+    private IEnumerable<TeamModel> GetCountries()
     {
       var json = File.ReadAllText(_jsonPath);
-      var countries = JsonConvert.DeserializeObject<List<CountryModel>>(json);
+      var countries = JsonConvert.DeserializeObject<List<TeamModel>>(json);
       return countries;
     }
 
@@ -34,7 +34,7 @@ namespace FWCB2014.Domain.Infrastructure.Repositories
       _jsonPath = jsonPath;
     }
 
-    public CountryModel Find(string code)
+    public TeamModel Find(string code)
     {
       var country = Countries.First(e => e.Code == code);
       // hack

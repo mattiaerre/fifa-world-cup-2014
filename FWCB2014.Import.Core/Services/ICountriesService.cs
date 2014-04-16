@@ -4,6 +4,6 @@ namespace FWCB2014.Import.Core.Services
 {
   public interface ICountriesService
   {
-    CountryModel GetCountry(string countryCode);
+    TeamModel GetCountry(string countryCode);
   }
 }

@@ -1,6 +1,6 @@
 ﻿namespace FWCB2014.Domain.Core.Models
 {
-  public abstract class TeamModelBase : ICode // info: this probably is more a standing model
+  public abstract class StandingModelBase : ICode
   {
     public string Code { get; set; } // info: the code from the data provider e.g. bra_int
     public int Position { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace FWCB2014.Domain.Core.Models
 {
-  public class CountryModel : ICode
+  public class TeamModel : ICode
   {
     public string Code { get; set; }
     public string Name { get; set; }

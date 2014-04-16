@@ -34,7 +34,7 @@ namespace FWCB2014.Import.Infrastructure.Tests.Spikes.Countries
 
       var teams = data.Descendants("team").Select(e => new { Code = e.Attribute("id").Value, Name = e.Descendants("name").First().Value.ToLower() });
 
-      var countries = new List<CountryModel>();
+      var countries = new List<TeamModel>();
 
       foreach (var team in teams.Where(e => e.Name != "england"))
       {
@@ -43,7 +43,7 @@ namespace FWCB2014.Import.Infrastructure.Tests.Spikes.Countries
         countries.Add(country);
       }
 
-      countries.Add(new CountryModel
+      countries.Add(new TeamModel
       {
         Code = "eng_int",
         Name = "England",
@@ -56,7 +56,7 @@ namespace FWCB2014.Import.Infrastructure.Tests.Spikes.Countries
       File.WriteAllText(@"C:\Users\mattiaerre\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web\App_Data\Countries.json", json);
     }
 
-    private static CountryModel GetCountry(string countryName)
+    private static TeamModel GetCountry(string countryName)
     {
       var uri = string.Format("http://restcountries.eu/rest/v1/name/{0}", countryName);
 
@@ -67,7 +67,7 @@ namespace FWCB2014.Import.Infrastructure.Tests.Spikes.Countries
       var alpha2Code = country.Children<JProperty>().First(e => e.Name == "alpha2Code").Value.ToString();
       var alpha3Code = country.Children<JProperty>().First(e => e.Name == "alpha3Code").Value.ToString();
 
-      return new CountryModel { Name = name, Alpha2Code = alpha2Code, Alpha3Code = alpha3Code };
+      return new TeamModel { Name = name, Alpha2Code = alpha2Code, Alpha3Code = alpha3Code };
     }
   }
 }

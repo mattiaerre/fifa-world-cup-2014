@@ -1,6 +1,7 @@
-﻿using System.Globalization;
+﻿using FWCB2014.Import.Core.Extensions;
 using NUnit.Framework;
 using System;
+using System.Globalization;
 
 namespace FWCB2014.Import.Infrastructure.Tests.Spikes.Matches
 {
@@ -16,23 +17,6 @@ namespace FWCB2014.Import.Infrastructure.Tests.Spikes.Matches
 
       Assert.AreEqual(new DateTime(year, month, day, hour, minute, second, DateTimeKind.Utc), dateTimeUtc);
       Assert.AreEqual(epoch, dateTimeUtc.ToEpoch().ToString(CultureInfo.InvariantCulture));
-    }
-  }
-
-  public static class DoubleExtensions
-  {
-    public static DateTime ToUtc(this double epoch)
-    {
-      var dateTimeUtc = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
-      dateTimeUtc = dateTimeUtc.AddSeconds(epoch).ToUniversalTime();
-      return dateTimeUtc;
-    }
-  }
-  public static class DateTimeExtensions
-  {
-    public static double ToEpoch(this DateTime dateTimeUtc)
-    {
-      return (dateTimeUtc - new DateTime(1970, 1, 1)).TotalSeconds;
     }
   }
 }

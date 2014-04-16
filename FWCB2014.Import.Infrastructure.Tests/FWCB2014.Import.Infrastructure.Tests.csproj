@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Services\XmlGroupsService_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\XmlMatchesService_Tests.cs" />
     <Compile Include="Spikes\Base_Tests.cs" />
     <Compile Include="Spikes\Countries\RestCountries_Tests.cs" />
     <Compile Include="Spikes\Matches\DoubleExtensions_Test.cs" />
