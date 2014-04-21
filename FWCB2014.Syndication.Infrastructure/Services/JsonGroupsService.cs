@@ -1,4 +1,6 @@
-﻿using FWCB2014.Domain.Core.Models;
+﻿using System;
+using AutoMapper;
+using FWCB2014.Domain.Core.Models;
 using FWCB2014.Domain.Core.Models.Query.Standings;
 using FWCB2014.Domain.Core.Repositories;
 using FWCB2014.Domain.Core.Services;
@@ -12,9 +14,9 @@ namespace FWCB2014.Syndication.Infrastructure.Services
   public class JsonGroupsService : IGroupsService<GroupModel<StandingModel>>
   {
     private readonly string _jsonPath;
-    private readonly IRepository<TeamModel> _repository;
+    private readonly IRepository<TeamModelBase> _repository;
 
-    public JsonGroupsService(string jsonPath, IRepository<TeamModel> repository)
+    public JsonGroupsService(string jsonPath, IRepository<TeamModelBase> repository)
     {
       _jsonPath = jsonPath;
       _repository = repository;
@@ -22,15 +24,26 @@ namespace FWCB2014.Syndication.Infrastructure.Services
 
     public IEnumerable<GroupModel<StandingModel>> GetAll()
     {
+      return Find(e => true); // info: take all
+    }
+
+    public IEnumerable<GroupModel<StandingModel>> Find(Func<GroupModel<StandingModel>, bool> predicate)
+    {
       var json = File.ReadAllText(_jsonPath);
-      var groups = JsonConvert.DeserializeObject<List<GroupModel<StandingModel>>>(json);
+      var groups = JsonConvert.DeserializeObject<List<GroupModel<StandingModel>>>(json)
+        .Where(predicate).ToList();
+
+      Mapper.CreateMap<TeamModelBase, TeamModel>();
 
       foreach (var @group in groups)
       {
         foreach (var team in @group.Teams)
         {
+          // todo: check this
           var country = _repository.Find(team.Code);
-          team.Team = country;
+          var destination = Mapper.Map<TeamModelBase, TeamModel>(country);
+          team.Team = destination;
+          // /todo: check this
         }
       }
       return groups.OrderBy(e => e.Name).ThenBy(e => e.Teams.OrderBy(t => t.Position));

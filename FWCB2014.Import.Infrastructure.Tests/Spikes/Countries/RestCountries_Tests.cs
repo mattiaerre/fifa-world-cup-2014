@@ -1,4 +1,4 @@
-﻿using FWCB2014.Domain.Core.Models;
+﻿using FWCB2014.Domain.Core.Models.Query.Standings; // todo: it shoudn't be this one
 using FWCB2014.Domain.Infrastructure.Helpers;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;

@@ -8,7 +8,7 @@ using FWCB2014.Import.Core.Extensions;
 
 namespace FWCB2014.Import.Infrastructure.Services
 {
-  public class XmlMatchesService : IMatchesService
+  public class XmlMatchesService : IMatchesService<MatchModel>
   {
     private readonly IEnumerable<KeyValuePair<string, MatchStatus>> _mapping = new List<KeyValuePair<string, MatchStatus>>
     {
@@ -26,14 +26,40 @@ namespace FWCB2014.Import.Infrastructure.Services
       var matches = _feed.Descendants("item");
       foreach (var match in matches)
       {
-        yield return new MatchModel
+        var model = new MatchModel
         {
           CompetitionCode = match.Attribute("contest").Value,
+          SeasonCode = match.Descendants("season").First().Value,
           Code = match.Attribute("id").Value,
           Status = GetStatus(match.Attribute("status").Value),
           Date = GetDate(match.Attribute("timestamp-starts").Value),
+          HomeTeam = GetTeam(match.Descendants("hosts").First().Attribute("id").Value),
+          AwayTeam = GetTeam(match.Descendants("guests").First().Attribute("id").Value),
+          FixtureInfo = match.Descendants("fixture-info").First().Value,
+          GroupId = GetGroupId(match.Descendants("group-id").FirstOrDefault()),
         };
+        SetScore(match.Descendants("score").First().Value, model.HomeTeam, model.AwayTeam);
+        yield return model;
       }
+    }
+
+    private string GetGroupId(XElement element)
+    {
+      if (element == null)
+        return string.Empty;
+      return element.Value;
+    }
+
+    private void SetScore(string value, TeamModel homeTeam, TeamModel awayTeam)
+    {
+      var score = value.Split('-');
+      homeTeam.Score = Convert.ToInt16(score[0]);
+      awayTeam.Score = Convert.ToInt16(score[1]);
+    }
+
+    private TeamModel GetTeam(string value)
+    {
+      return new TeamModel { Code = value, Score = 0 };
     }
 
     private DateTime GetDate(string value)

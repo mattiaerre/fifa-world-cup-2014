@@ -2,6 +2,9 @@
   ViewBag.Title = "Groups";
 }
 
+<script type="text/javascript">
+  var groupId = '@ViewBag.GroupId';
+</script>
 <script src="~/Scripts/Groups/Index/app.js"></script>
 
 <h2>@ViewBag.Title</h2>
@@ -11,7 +14,9 @@
 <div data-bind="template: { name: 'groups-template', foreach: $data }"></div>
 
 <script type="text/html" id="groups-template">
-  <h3 data-bind="text: Name"></h3>
+  <h3>
+    <a href="#" data-bind="attr: {}, text: Name"></a>
+  </h3>
   <table class="table table-responsive table-bordered table-striped">
     <thead>
       <tr>
@@ -34,8 +39,8 @@
 <script type="text/html" id="group-template">
   <tr>
     <td>
-      <img src="../../Images/blank.gif" data-bind="attr: { class : 'flag flag-' + Country.Alpha2Code.toLowerCase(), alt : Country.Name }" alt="" />
-      <span data-bind="text: Country.Alpha3Code"></span>
+      <img src="../../Images/blank.gif" data-bind="attr: { class : 'flag flag-' + Team.Alpha2Code.toLowerCase(), alt : Team.Name }" alt="" />
+      <span data-bind="text: Team.Alpha3Code"></span>
     </td>
     <td data-bind="text: Played"></td>
     <td data-bind="text: Won"></td>

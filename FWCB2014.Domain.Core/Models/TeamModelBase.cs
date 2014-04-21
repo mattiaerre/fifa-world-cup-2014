@@ -1,6 +1,6 @@
 ﻿namespace FWCB2014.Domain.Core.Models
 {
-  public class TeamModel : ICode
+  public class TeamModelBase : ICode // info: try to make it abstract
   {
     public string Code { get; set; }
     public string Name { get; set; }

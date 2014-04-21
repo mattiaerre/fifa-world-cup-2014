@@ -39,15 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Command\Matches\ICompetitionCode.cs" />
-    <Compile Include="Models\Command\Matches\IDate.cs" />
-    <Compile Include="Models\Command\Matches\IStatus.cs" />
+    <Compile Include="Models\Command\Matches\TeamModel.cs" />
+    <Compile Include="Models\ICompetitionCode.cs" />
+    <Compile Include="Models\IDate.cs" />
+    <Compile Include="Models\IStatus.cs" />
     <Compile Include="Models\Command\Matches\MatchModel.cs" />
     <Compile Include="Models\Command\Matches\MatchStatus.cs" />
-    <Compile Include="Models\ITeamModel.cs" />
+    <Compile Include="Models\ISeasonCode.cs" />
+    <Compile Include="Models\Query\Matches\MatchModel.cs" />
     <Compile Include="Models\Query\Standings\StandingModel.cs" />
+    <Compile Include="Models\Query\Standings\TeamModel.cs" />
     <Compile Include="Models\StandingModelBase.cs" />
-    <Compile Include="Models\TeamModel.cs" />
+    <Compile Include="Models\TeamModelBase.cs" />
     <Compile Include="Models\GroupModel.cs" />
     <Compile Include="Models\ICode.cs" />
     <Compile Include="Models\Command\Standings\StandingModel.cs" />
@@ -56,6 +59,7 @@
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Services\IGroupsService.cs" />
     <Compile Include="Services\IMatchesService.cs" />
+    <Compile Include="Models\MatchModelBase.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

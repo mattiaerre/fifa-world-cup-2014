@@ -27,6 +27,11 @@ namespace FWCB2014.Import.Infrastructure.Services
       }
     }
 
+    public IEnumerable<GroupModel<StandingModel>> Find(Func<GroupModel<StandingModel>, bool> predicate)
+    {
+      throw new NotImplementedException();
+    }
+
     private static IEnumerable<StandingModel> GetTeams(IEnumerable<XElement> @group)
     {
       foreach (var team in @group)

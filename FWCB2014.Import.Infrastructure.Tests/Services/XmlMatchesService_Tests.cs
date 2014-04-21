@@ -1,16 +1,18 @@
-﻿using System.Linq;
-using System.Xml.Linq;
+﻿using FWCB2014.Domain.Core.Models.Command.Matches;
 using FWCB2014.Domain.Core.Services;
 using FWCB2014.Import.Infrastructure.Services;
 using Newtonsoft.Json;
 using NUnit.Framework;
+using System.IO;
+using System.Linq;
+using System.Xml.Linq;
 
 namespace FWCB2014.Import.Infrastructure.Tests.Services
 {
   [TestFixture]
   public class XmlMatchesService_Tests
   {
-    private IMatchesService _service;
+    private IMatchesService<MatchModel> _service;
 
     [SetUp]
     public void Given_An_XmlMatchesService()
@@ -26,6 +28,8 @@ namespace FWCB2014.Import.Infrastructure.Tests.Services
       var matches = _service.GetAll();
 
       var json = JsonConvert.SerializeObject(matches);
+
+      File.WriteAllText(@"C:\Users\mattiaerre\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web\App_Data\Matches.json", json);
 
       Assert.AreEqual(64, matches.Count());
     }

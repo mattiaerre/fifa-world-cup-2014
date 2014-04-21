@@ -3,6 +3,7 @@ using Castle.MicroKernel.Resolvers.SpecializedResolvers;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
 using FWCB2014.Domain.Core.Models;
+using FWCB2014.Domain.Core.Models.Query.Standings;
 using FWCB2014.Domain.Core.Repositories;
 using FWCB2014.Domain.Core.Services;
 using FWCB2014.Domain.Infrastructure.Repositories;
@@ -14,7 +15,6 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using WebApiContrib.IoC.CastleWindsor;
-using StandingModel = FWCB2014.Domain.Core.Models.Query.Standings.StandingModel;
 
 namespace FWCB2014.Syndication.Web
 {
@@ -49,7 +49,7 @@ namespace FWCB2014.Syndication.Web
       // /info: for ApiController
 
       _container.Register(
-        Component.For<IRepository<TeamModel>>().ImplementedBy<JsonCountryRepository>().DependsOn(new { jsonPath = Server.MapPath(@"~/App_Data/Countries.json") }));
+        Component.For<IRepository<TeamModelBase>>().ImplementedBy<JsonCountryRepository>().DependsOn(new { jsonPath = Server.MapPath(@"~/App_Data/Countries.json") }));
 
       _container.Register(
         Component.For<IGroupsService<GroupModel<StandingModel>>>().ImplementedBy<JsonGroupsService>().DependsOn(new { jsonPath = Server.MapPath(@"~/App_Data/Groups.json"), }));

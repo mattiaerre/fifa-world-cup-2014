@@ -5,14 +5,14 @@ namespace FWCB2014.Import.Core.Services
 {
   public class CountriesService : ICountriesService
   {
-    private readonly IRepository<TeamModel> _repository;
+    private readonly IRepository<TeamModelBase> _repository;
 
-    public CountriesService(IRepository<TeamModel> repository)
+    public CountriesService(IRepository<TeamModelBase> repository)
     {
       _repository = repository;
     }
 
-    public TeamModel GetCountry(string countryCode)
+    public TeamModelBase GetCountry(string countryCode)
     {
       return _repository.Find(countryCode);
     }

@@ -1,18 +1,18 @@
 ﻿using FWCB2014.Domain.Core.Models;
 using FWCB2014.Domain.Core.Repositories;
-using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Newtonsoft.Json;
 
 namespace FWCB2014.Domain.Infrastructure.Repositories
 {
-  public class JsonCountryRepository : IRepository<TeamModel>
+  public class JsonCountryRepository : IRepository<TeamModelBase>
   {
     private readonly string _jsonPath;
 
-    private IEnumerable<TeamModel> _countries;
-    private IEnumerable<TeamModel> Countries
+    private IEnumerable<TeamModelBase> _countries;
+    private IEnumerable<TeamModelBase> Countries
     {
       get
       {
@@ -22,10 +22,10 @@ namespace FWCB2014.Domain.Infrastructure.Repositories
       }
     }
 
-    private IEnumerable<TeamModel> GetCountries()
+    private IEnumerable<TeamModelBase> GetCountries()
     {
       var json = File.ReadAllText(_jsonPath);
-      var countries = JsonConvert.DeserializeObject<List<TeamModel>>(json);
+      var countries = JsonConvert.DeserializeObject<List<TeamModelBase>>(json);
       return countries;
     }
 
@@ -34,7 +34,7 @@ namespace FWCB2014.Domain.Infrastructure.Repositories
       _jsonPath = jsonPath;
     }
 
-    public TeamModel Find(string code)
+    public TeamModelBase Find(string code)
     {
       var country = Countries.First(e => e.Code == code);
       // hack
