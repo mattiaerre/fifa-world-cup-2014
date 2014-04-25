@@ -12,7 +12,7 @@ namespace FWCB2014.Domain.Infrastructure.Tests.Repositories
       const string jsonPath = @"C:\Users\mattiaerre\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web\App_Data\Countries.json";
       var repository = new JsonCountryRepository(jsonPath);
 
-      var country = repository.Find(countryCode);
+      var country = repository.Find(e => e.Name == "WTF!");
 
       Assert.IsNotNull(country);
     }

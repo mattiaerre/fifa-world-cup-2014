@@ -1,8 +1,9 @@
-﻿using FWCB2014.Domain.Core.Models.Query.Standings; // todo: it shoudn't be this one
+﻿using FWCB2014.Domain.Core.Models;
 using FWCB2014.Domain.Infrastructure.Helpers;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -34,40 +35,43 @@ namespace FWCB2014.Import.Infrastructure.Tests.Spikes.Countries
 
       var teams = data.Descendants("team").Select(e => new { Code = e.Attribute("id").Value, Name = e.Descendants("name").First().Value.ToLower() });
 
-      var countries = new List<TeamModel>();
+      var countries = new Dictionary<string, CountryModel>();
 
       foreach (var team in teams.Where(e => e.Name != "england"))
       {
         var country = GetCountry(team.Name);
-        country.Code = team.Code;
-        countries.Add(country);
+        countries.Add(team.Code, country);
       }
 
-      countries.Add(new TeamModel
+      countries.Add("eng_int", new CountryModel
       {
-        Code = "eng_int",
         Name = "England",
         Alpha2Code = "EN",
         Alpha3Code = "ENG",
       });
 
-      var json = JsonConvert.SerializeObject(countries.OrderBy(e => e.Code));
-
-      File.WriteAllText(@"C:\Users\mattiaerre\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web\App_Data\Countries.json", json);
+      SerializeAndSave(countries.OrderBy(e => e.Key), "Countries");
     }
 
-    private static TeamModel GetCountry(string countryName)
+    private static void SerializeAndSave(object data, string fileNamePrefix)
+    {
+      var json = JsonConvert.SerializeObject(data);
+
+      File.WriteAllText(string.Format(@"C:\Users\mattiaerre\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web\App_Data\{0}_{1}.json", fileNamePrefix, DateTime.UtcNow.ToString("yyyyMMdd")), json);
+    }
+
+    private static CountryModel GetCountry(string countryName)
     {
       var uri = string.Format("http://restcountries.eu/rest/v1/name/{0}", countryName);
 
       var response = HttpHelper.HttpGet(uri);
-      var country = countryName == "iran" ? JArray.Parse(response).Skip(1).Take(1).First() : JArray.Parse(response).First();
+      var country = JArray.Parse(response).First();
 
       var name = country.Children<JProperty>().First(e => e.Name == "name").Value.ToString();
       var alpha2Code = country.Children<JProperty>().First(e => e.Name == "alpha2Code").Value.ToString();
       var alpha3Code = country.Children<JProperty>().First(e => e.Name == "alpha3Code").Value.ToString();
 
-      return new TeamModel { Name = name, Alpha2Code = alpha2Code, Alpha3Code = alpha3Code };
+      return new CountryModel { Name = name, Alpha2Code = alpha2Code, Alpha3Code = alpha3Code };
     }
   }
 }

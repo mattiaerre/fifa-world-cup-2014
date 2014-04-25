@@ -1,4 +1,4 @@
-﻿using FWCB2014.Domain.Core.Models.Query.Standings; // todo: it shoudn't be this one
+﻿using FWCB2014.Domain.Core.Models;
 using FWCB2014.Domain.Core.Repositories;
 using FWCB2014.Import.Core.Services;
 using Moq;
@@ -10,7 +10,7 @@ namespace FWCB2014.Import.Core.Tests.Services
   public class CountriesService_Test
   {
     private ICountriesService _service;
-    private readonly Mock<IRepository<TeamModel>> _repository = new Mock<IRepository<TeamModel>>();
+    private readonly Mock<IRepository<CountryModel>> _repository = new Mock<IRepository<CountryModel>>();
 
     [SetUp]
     public void Given_A_CountriesService()
@@ -22,7 +22,7 @@ namespace FWCB2014.Import.Core.Tests.Services
     [TestCase("ITA", "Italy")]
     public void It_Should_Be_Able_To_Return_A_CountryModel_Given_A_CountryName(string countryCode, string countryName)
     {
-      _repository.Setup(e => e.Find(countryCode)).Returns(new TeamModel { Code = countryCode, Name = countryName});
+      _repository.Setup(e => e.Find(c => c.Name == "WTF!")).Returns(new CountryModel { Name = countryName });
 
       var country = _service.GetCountry(countryCode);
 

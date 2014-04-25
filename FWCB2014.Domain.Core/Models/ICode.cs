@@ -2,6 +2,6 @@
 {
   public interface ICode
   {
-    string Code { get; set; }
+    string Code { get; set; } // todo: try always to use Id
   }
 }

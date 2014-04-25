@@ -40,8 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Command\Matches\TeamModel.cs" />
+    <Compile Include="Models\CountryModel.cs" />
     <Compile Include="Models\ICompetitionCode.cs" />
     <Compile Include="Models\IDate.cs" />
+    <Compile Include="Models\IId.cs" />
     <Compile Include="Models\IStatus.cs" />
     <Compile Include="Models\Command\Matches\MatchModel.cs" />
     <Compile Include="Models\Command\Matches\MatchStatus.cs" />

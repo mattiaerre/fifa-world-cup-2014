@@ -177,6 +177,7 @@
     <Content Include="App_Data\Countries.json" />
     <Content Include="App_Data\Groups.json" />
     <Content Include="App_Data\Matches.json" />
+    <Content Include="App_Data\Countries_20140423.json" />
     <None Include="Properties\PublishProfiles\FWCB2014.SYNDICATION.WEB.CLOUD.PRD.pubxml" />
     <None Include="Properties\PublishProfiles\FWCB2014.Syndication.Web.LOC.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

@@ -7,6 +7,6 @@ namespace FWCB2014.Domain.Core.Models
     public string CompetitionCode { get; set; }
     public string SeasonCode { get; set; }
     public string Name { get; set; }
-    public IEnumerable<T> Teams { get; set; }
+    public IEnumerable<T> Teams { get; set; } // todo: this should be more generic (as a name) for example Items ???
   }
 }

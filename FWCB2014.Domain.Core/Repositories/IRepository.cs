@@ -1,9 +1,9 @@
-﻿using FWCB2014.Domain.Core.Models;
+﻿using System;
 
 namespace FWCB2014.Domain.Core.Repositories
 {
-  public interface IRepository<out T> where T : ICode
+  public interface IRepository<out T>
   {
-    T Find(string code);
+    T Find(Func<T, bool> predicate);
   }
 }

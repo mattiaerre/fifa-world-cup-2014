@@ -1,10 +1,10 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using FWCB2014.Domain.Core.Models;
 using FWCB2014.Domain.Core.Models.Query.Standings;
 using FWCB2014.Domain.Core.Repositories;
 using FWCB2014.Domain.Core.Services;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,9 +14,9 @@ namespace FWCB2014.Syndication.Infrastructure.Services
   public class JsonGroupsService : IGroupsService<GroupModel<StandingModel>>
   {
     private readonly string _jsonPath;
-    private readonly IRepository<TeamModelBase> _repository;
+    private readonly IRepository<CountryModel> _repository;
 
-    public JsonGroupsService(string jsonPath, IRepository<TeamModelBase> repository)
+    public JsonGroupsService(string jsonPath, IRepository<CountryModel> repository)
     {
       _jsonPath = jsonPath;
       _repository = repository;
@@ -33,15 +33,15 @@ namespace FWCB2014.Syndication.Infrastructure.Services
       var groups = JsonConvert.DeserializeObject<List<GroupModel<StandingModel>>>(json)
         .Where(predicate).ToList();
 
-      Mapper.CreateMap<TeamModelBase, TeamModel>();
+      Mapper.CreateMap<CountryModel, TeamModel>();
 
       foreach (var @group in groups)
       {
         foreach (var team in @group.Teams)
         {
           // todo: check this
-          var country = _repository.Find(team.Code);
-          var destination = Mapper.Map<TeamModelBase, TeamModel>(country);
+          var country = _repository.Find(e => e.Name == "WTF!");
+          var destination = Mapper.Map<CountryModel, TeamModel>(country);
           team.Team = destination;
           // /todo: check this
         }
