@@ -1,83 +1,169 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
+﻿using System.Reflection;
 using Castle.MicroKernel.Registration;
-using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 using Castle.Windsor.Configuration.Interpreters;
-using Castle.Windsor.Installer;
 using Quartz;
-using Quartz.Impl;
-using Quartz.Spi;
+using System;
 
 namespace FWCB2014.Import.Runner
 {
-    public class Program
+  public class Program
+  {
+    private static IWindsorContainer BootstrapContainer()
     {
-        private static IWindsorContainer BootstrapContainer()
-        {
-            return new WindsorContainer(new XmlInterpreter())
-                .Install(FromAssembly.This());
-        }
+      var container = new WindsorContainer(new XmlInterpreter());
 
-        public static void Main(string[] args)
-        {
-            var container = BootstrapContainer();
+      container.Register(Component.For<IMessageService>().ImplementedBy<MessageService>());
 
-            //var schedulerFactory = new StdSchedulerFactory();
-
-            //var scheduler = schedulerFactory.GetScheduler();
-            //scheduler.Start();
-
-            //var detail = JobBuilder.Create<HelloJob>()
-            //    .WithIdentity("job-name", "grup-name")
-            //    .Build();
-
-            //var trigger = TriggerBuilder.Create()
-            //    .WithIdentity("trigger-name", "group-name")
-            //    .StartNow()
-            //    .WithSimpleSchedule(e => e.WithIntervalInSeconds(10).RepeatForever())
-            //    .Build();
-
-            //scheduler.ScheduleJob(detail, trigger);
-
-            Console.WriteLine("{0}", DateTime.Now.ToString("HH:mm:ss"));
-
-            container.Dispose();
-        }
+      return container;
     }
 
-    public class HelloJob : IJob
+    public static void Main(string[] args)
     {
-        private readonly IMessageService _service;
+      Console.WriteLine("{0} started at {1}", Assembly.GetExecutingAssembly().GetName().Name, DateTime.Now.ToString("HH:mm:ss"));
 
-        public HelloJob()
-            : this(new MessageService())
-        {
-        }
+      var container = BootstrapContainer();
 
-        public HelloJob(IMessageService service)
-        {
-            _service = service;
-        }
+      Console.ReadLine();
 
-        public void Execute(IJobExecutionContext context)
-        {
-            Console.WriteLine(_service.GetMessage());
-        }
+      container.Dispose();
+    }
+  }
+
+  public class HelloJob : IJob
+  {
+    private readonly IMessageService _service;
+
+    //public HelloJob()
+    //  : this(new MessageService())
+    //{
+    //}
+
+    public HelloJob(IMessageService service)
+    {
+      _service = service;
     }
 
-    public class MessageService : IMessageService
+    public void Execute(IJobExecutionContext context)
     {
-        public string GetMessage()
-        {
-            return string.Format("{0} HelloJob is executing.", DateTime.Now.ToString("HH:mm:ss"));
-        }
+      Console.WriteLine(_service.GetMessage());
+      //Console.WriteLine("WTF!");
+    }
+  }
+
+  public class MessageService : IMessageService
+  {
+    public string GetMessage()
+    {
+      return string.Format("{0} HelloJob is executing.", DateTime.Now.ToString("HH:mm:ss"));
+    }
+  }
+
+  public interface IMessageService
+  {
+    string GetMessage();
+  }
+
+  public class SampleSchedulerListener : ISchedulerListener
+  {
+    public void JobScheduled(ITrigger trigger)
+    {
+      Console.WriteLine(GetType().Name + ".JobScheduled");
     }
 
-    public interface IMessageService
+    public void JobUnscheduled(TriggerKey triggerKey)
     {
-        string GetMessage();
+      Console.WriteLine(GetType().Name + ".JobUnscheduled");
     }
+
+    public void TriggerFinalized(ITrigger trigger)
+    {
+      Console.WriteLine(GetType().Name + ".TriggerFinalized");
+    }
+
+    public void TriggerPaused(TriggerKey triggerKey)
+    {
+      Console.WriteLine(GetType().Name + ".TriggerPaused");
+    }
+
+    public void TriggersPaused(string triggerGroup)
+    {
+      Console.WriteLine(GetType().Name + ".TriggersPaused");
+    }
+
+    public void TriggerResumed(TriggerKey triggerKey)
+    {
+      Console.WriteLine(GetType().Name + ".TriggerResumed");
+    }
+
+    public void TriggersResumed(string triggerGroup)
+    {
+      Console.WriteLine(GetType().Name + ".TriggersResumed");
+    }
+
+    public void JobAdded(IJobDetail jobDetail)
+    {
+      Console.WriteLine(GetType().Name + ".JobAdded");
+    }
+
+    public void JobDeleted(JobKey jobKey)
+    {
+      Console.WriteLine(GetType().Name + ".JobDeleted");
+    }
+
+    public void JobPaused(JobKey jobKey)
+    {
+      Console.WriteLine(GetType().Name + ".JobPaused");
+    }
+
+    public void JobsPaused(string jobGroup)
+    {
+      Console.WriteLine(GetType().Name + ".JobsPaused");
+    }
+
+    public void JobResumed(JobKey jobKey)
+    {
+      Console.WriteLine(GetType().Name + ".JobResumed");
+    }
+
+    public void JobsResumed(string jobGroup)
+    {
+      Console.WriteLine(GetType().Name + ".JobsResumed");
+    }
+
+    public void SchedulerError(string msg, SchedulerException cause)
+    {
+      Console.WriteLine(GetType().Name + ".SchedulerError");
+    }
+
+    public void SchedulerInStandbyMode()
+    {
+      Console.WriteLine(GetType().Name + ".SchedulerInStandbyMode");
+    }
+
+    public void SchedulerStarted()
+    {
+      Console.WriteLine(GetType().Name + ".SchedulerStarted");
+    }
+
+    public void SchedulerStarting()
+    {
+      Console.WriteLine(GetType().Name + ".SchedulerStarting");
+    }
+
+    public void SchedulerShutdown()
+    {
+      Console.WriteLine(GetType().Name + ".SchedulerShutdown");
+    }
+
+    public void SchedulerShuttingdown()
+    {
+      Console.WriteLine(GetType().Name + ".SchedulerShuttingdown");
+    }
+
+    public void SchedulingDataCleared()
+    {
+      Console.WriteLine(GetType().Name + ".SchedulingDataCleared");
+    }
+  }
 }
