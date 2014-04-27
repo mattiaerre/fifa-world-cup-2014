@@ -38,7 +38,7 @@ namespace FWCB2014.Import.Infrastructure.Services
       {
         yield return new StandingModel
         {
-          Code = team.Element("team").Attribute("id").Value,
+          TeamId = team.Element("team").Attribute("id").Value,
           Position = Convert.ToInt32(team.Element("position").Value),
         };
       }

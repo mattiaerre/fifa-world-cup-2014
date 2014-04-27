@@ -58,7 +58,7 @@ namespace FWCB2014.Import.Infrastructure.Tests.Services
 
       var group = groups.Skip(3).Take(1).First();
 
-      Assert.AreEqual("eng_int", group.Teams.Skip(1).Take(1).First().Code);
+      Assert.AreEqual("eng_int", group.Teams.Skip(1).Take(1).First().TeamId);
     }
   }
 }

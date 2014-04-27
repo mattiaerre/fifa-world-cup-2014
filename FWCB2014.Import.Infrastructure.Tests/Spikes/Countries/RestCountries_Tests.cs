@@ -1,4 +1,5 @@
-﻿using FWCB2014.Domain.Core.Models;
+﻿using System.Collections.Specialized;
+using FWCB2014.Domain.Core.Models;
 using FWCB2014.Domain.Infrastructure.Helpers;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -11,6 +12,7 @@ using System.Xml.Linq;
 
 namespace FWCB2014.Import.Infrastructure.Tests.Spikes.Countries
 {
+  // todo: add this class to the import structure
   [TestFixture]
   public class RestCountries_Tests
   {
@@ -35,29 +37,38 @@ namespace FWCB2014.Import.Infrastructure.Tests.Spikes.Countries
 
       var teams = data.Descendants("team").Select(e => new { Code = e.Attribute("id").Value, Name = e.Descendants("name").First().Value.ToLower() });
 
-      var countries = new Dictionary<string, CountryModel>();
+      var mapping = new Dictionary<string, string>();
+      var countries = new List<CountryModel>();
 
       foreach (var team in teams.Where(e => e.Name != "england"))
       {
         var country = GetCountry(team.Name);
-        countries.Add(team.Code, country);
+        mapping.Add(team.Code, country.Alpha3Code);
+        countries.Add(country);
       }
 
-      countries.Add("eng_int", new CountryModel
+      const string englandName = "England";
+      const string englandAlpha3Code = "ENG";
+      mapping.Add("eng_int", englandAlpha3Code);
+      countries.Add(new CountryModel
       {
-        Name = "England",
-        Alpha2Code = "EN",
-        Alpha3Code = "ENG",
+        Name = englandName,
+        Alpha2Code = englandName,
+        Alpha3Code = englandAlpha3Code,
       });
 
-      SerializeAndSave(countries.OrderBy(e => e.Key), "Countries");
+      SerializeAndSave(mapping.OrderBy(e => e.Key), "Team_Country_Mapping", false);
+      SerializeAndSave(countries.OrderBy(e => e.Name), "Countries", false);
     }
 
-    private static void SerializeAndSave(object data, string fileNamePrefix)
+    private static void SerializeAndSave(object data, string fileNamePrefix, bool withVersion)
     {
       var json = JsonConvert.SerializeObject(data);
 
-      File.WriteAllText(string.Format(@"C:\Users\mattiaerre\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web\App_Data\{0}_{1}.json", fileNamePrefix, DateTime.UtcNow.ToString("yyyyMMdd")), json);
+      File.WriteAllText(string.Format(@"C:\Users\mattiaerre\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web\App_Data\{0}{1}.json",
+        fileNamePrefix,
+        withVersion? string.Format("_{0}", DateTime.UtcNow.ToString("yyyyMMdd")) : string.Empty),
+        json);
     }
 
     private static CountryModel GetCountry(string countryName)

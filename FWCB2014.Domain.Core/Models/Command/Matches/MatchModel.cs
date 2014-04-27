@@ -26,16 +26,16 @@ namespace FWCB2014.Domain.Core.Models.Command.Matches
   //  </details>
   //</item>
 
-  public class MatchModel : MatchModelBase, ICompetitionCode, ISeasonCode, ICode, IStatus<MatchStatus>, IDate
+  public class MatchModel : MatchModelBase, ICompetitionCode, ISeasonCode, IId<string>, IStatus<MatchStatus>, IDate, IGroupId<string>
   {
     public string CompetitionCode { get; set; }
     public string SeasonCode { get; set; }
-    public string Code { get; set; }
+    public string Id { get; set; }
     public MatchStatus Status { get; set; }
     public DateTime Date { get; set; }
+    public string GroupId { get; set; }
     public TeamModel HomeTeam { get; set; }
     public TeamModel AwayTeam { get; set; }
     public string FixtureInfo { get; set; }
-    public string GroupId { get; set; }
   }
 }

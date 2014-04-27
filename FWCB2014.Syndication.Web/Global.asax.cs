@@ -49,7 +49,10 @@ namespace FWCB2014.Syndication.Web
       // /info: for ApiController
 
       _container.Register(
-        Component.For<IRepository<CountryModel>>().ImplementedBy<JsonCountryRepository>().DependsOn(new { jsonPath = Server.MapPath(@"~/App_Data/Countries.json") }));
+        Component.For<IRepository<CountryModel>>()
+        .ImplementedBy<JsonCountryRepository>()
+        .DependsOn(new { jsonPath = Server.MapPath(@"~/App_Data/Countries.json") })
+        .LifestyleSingleton());
 
       _container.Register(
         Component.For<IGroupsService<GroupModel<StandingModel>>>().ImplementedBy<JsonGroupsService>().DependsOn(new { jsonPath = Server.MapPath(@"~/App_Data/Groups.json"), }));

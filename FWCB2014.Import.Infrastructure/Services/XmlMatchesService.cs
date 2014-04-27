@@ -1,10 +1,10 @@
-﻿using System;
+﻿using FWCB2014.Domain.Core.Models.Command.Matches;
+using FWCB2014.Domain.Core.Services;
+using FWCB2014.Import.Core.Extensions;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
-using FWCB2014.Domain.Core.Models.Command.Matches;
-using FWCB2014.Domain.Core.Services;
-using System.Collections.Generic;
-using FWCB2014.Import.Core.Extensions;
 
 namespace FWCB2014.Import.Infrastructure.Services
 {
@@ -30,7 +30,7 @@ namespace FWCB2014.Import.Infrastructure.Services
         {
           CompetitionCode = match.Attribute("contest").Value,
           SeasonCode = match.Descendants("season").First().Value,
-          Code = match.Attribute("id").Value,
+          Id = match.Attribute("id").Value,
           Status = GetStatus(match.Attribute("status").Value),
           Date = GetDate(match.Attribute("timestamp-starts").Value),
           HomeTeam = GetTeam(match.Descendants("hosts").First().Attribute("id").Value),
@@ -59,7 +59,7 @@ namespace FWCB2014.Import.Infrastructure.Services
 
     private TeamModel GetTeam(string value)
     {
-      return new TeamModel { Code = value, Score = 0 };
+      return new TeamModel { Id = value, Score = 0 };
     }
 
     private DateTime GetDate(string value)

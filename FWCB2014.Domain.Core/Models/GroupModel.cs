@@ -1,8 +1,10 @@
+// todo: refactoring
+
 using System.Collections.Generic;
 
 namespace FWCB2014.Domain.Core.Models
 {
-  public class GroupModel<T> : ICompetitionCode, ISeasonCode, IName where T : StandingModelBase
+  public class GroupModel<T> : ICompetitionCode, ISeasonCode, IName where T : StandingModelBase // info: why this ?!?
   {
     public string CompetitionCode { get; set; }
     public string SeasonCode { get; set; }

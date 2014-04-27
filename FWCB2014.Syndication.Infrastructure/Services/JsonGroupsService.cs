@@ -40,7 +40,7 @@ namespace FWCB2014.Syndication.Infrastructure.Services
         foreach (var team in @group.Teams)
         {
           // todo: check this
-          var country = _repository.Find(e => e.Name == "WTF!");
+          var country = _repository.Find(e => e.Name == "WTF!").First();
           var destination = Mapper.Map<CountryModel, TeamModel>(country);
           team.Team = destination;
           // /todo: check this

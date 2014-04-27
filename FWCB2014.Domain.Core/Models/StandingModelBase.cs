@@ -1,8 +1,9 @@
 ﻿namespace FWCB2014.Domain.Core.Models
 {
-  public abstract class StandingModelBase : ICode
+  public abstract class StandingModelBase : ITeamId<string>, IGroupId<string>
   {
-    public string Code { get; set; } // info: the code from the data provider e.g. bra_int
+    public string TeamId { get; set; }
+    public string GroupId { get; set; }
     public int Position { get; set; }
     public int Played { get; set; }
     public int Won { get; set; }

@@ -35,14 +35,10 @@ namespace FWCB2014.Domain.Infrastructure.Repositories
       _jsonPath = jsonPath;
     }
 
-    public CountryModel Find(Func<CountryModel, bool> predicate)
+    public IEnumerable<CountryModel> Find(Func<CountryModel, bool> predicate)
     {
-      var country = Countries.First(predicate);
-      // hack
-      if (country.Name == "England")
-        country.Alpha2Code = "England";
-      // /hack
-      return country;
+      var countries = Countries.Where(predicate);
+      return countries;
     }
   }
 }
