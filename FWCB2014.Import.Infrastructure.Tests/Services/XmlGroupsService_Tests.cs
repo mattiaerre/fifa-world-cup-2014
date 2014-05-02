@@ -2,6 +2,7 @@
 using FWCB2014.Domain.Core.Models.Command.Standings;
 using FWCB2014.Domain.Core.Services;
 using FWCB2014.Import.Infrastructure.Services;
+using FWCB2014.Import.Infrastructure.Tests.Properties;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using System.IO;
@@ -18,7 +19,7 @@ namespace FWCB2014.Import.Infrastructure.Tests.Services
     [SetUp]
     public void Given_An_XmlGroupsService()
     {
-      var feed = XElement.Load(@"C:\Users\mattiaerre\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web\App_Data\Standings_20140405.xml");
+        var feed = XElement.Load(string.Format("{0}{1}", Settings.Default.SyndicationRoot, @"\App_Data\Standings_20140405.xml"));
       _service = new XmlGroupsService(feed);
     }
 
@@ -30,7 +31,7 @@ namespace FWCB2014.Import.Infrastructure.Tests.Services
 
       var json = JsonConvert.SerializeObject(groups);
 
-      File.WriteAllText(@"C:\Users\mattiaerre\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web\App_Data\Groups.json", json);
+      File.WriteAllText(string.Format("{0}{1}", Settings.Default.SyndicationRoot, @"\App_Data\Groups.json"), json);
 
       Assert.AreEqual(8, groups.Count());
     }

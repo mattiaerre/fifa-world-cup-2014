@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FWCB2014.Import.Runner.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SyndicationRoot" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\Users\mattia\Source\Repos\fifa-world-cup-2014\FWCB2014.Import.Runner</Value>
+    </Setting>
+    <Setting Name="RestCountriesUri" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://restcountries.eu/rest/v1</Value>
+    </Setting>
+    <Setting Name="DateTimeFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dd/MM/yyyy HH:mm:ss.fff</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -7,17 +7,45 @@
   </processing-directives>
   <schedule>
     <job>
-      <name>hello-world</name>
-      <job-type>FWCB2014.Import.Runner.HelloJob, FWCB2014.Import.Runner</job-type>
+      <name>countries</name>
+      <job-type>FWCB2014.Import.Runner.Jobs.CountriesJob, FWCB2014.Import.Runner</job-type>
       <durable>true</durable>
       <recover>true</recover>
     </job>
+    <job>
+      <name>matches</name>
+      <job-type>FWCB2014.Import.Runner.Jobs.MatchesJob, FWCB2014.Import.Runner</job-type>
+      <durable>true</durable>
+      <recover>true</recover>
+    </job>
+    <job>
+      <name>standings</name>
+      <job-type>FWCB2014.Import.Runner.Jobs.StandingsJob, FWCB2014.Import.Runner</job-type>
+      <durable>true</durable>
+      <recover>true</recover>
+    </job>
+    <!--<trigger>
+      <simple>
+        <name>countries-trigger</name>
+        <job-name>countries</job-name>
+        <repeat-count>-1</repeat-count>
+        <repeat-interval>60000</repeat-interval>
+      </simple>
+    </trigger>-->
     <trigger>
       <simple>
-        <name>sample-trigger</name>
-        <job-name>hello-world</job-name>
+        <name>matches-trigger</name>
+        <job-name>matches</job-name>
         <repeat-count>-1</repeat-count>
-        <repeat-interval>2000</repeat-interval>
+        <repeat-interval>10000</repeat-interval>
+      </simple>
+    </trigger>
+    <trigger>
+      <simple>
+        <name>standings-trigger</name>
+        <job-name>standings</job-name>
+        <repeat-count>-1</repeat-count>
+        <repeat-interval>10000</repeat-interval>
       </simple>
     </trigger>
   </schedule>

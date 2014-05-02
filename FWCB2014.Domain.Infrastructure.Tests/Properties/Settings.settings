@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FWCB2014.Domain.Infrastructure.Tests.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SyndicationRoot" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\Users\mattia\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
