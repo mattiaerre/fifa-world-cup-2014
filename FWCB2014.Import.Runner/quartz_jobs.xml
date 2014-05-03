@@ -7,45 +7,33 @@
   </processing-directives>
   <schedule>
     <job>
-      <name>countries</name>
-      <job-type>FWCB2014.Import.Runner.Jobs.CountriesJob, FWCB2014.Import.Runner</job-type>
-      <durable>true</durable>
-      <recover>true</recover>
-    </job>
-    <job>
-      <name>matches</name>
-      <job-type>FWCB2014.Import.Runner.Jobs.MatchesJob, FWCB2014.Import.Runner</job-type>
-      <durable>true</durable>
-      <recover>true</recover>
-    </job>
-    <job>
-      <name>standings</name>
+      <name>standings-job</name>
       <job-type>FWCB2014.Import.Runner.Jobs.StandingsJob, FWCB2014.Import.Runner</job-type>
       <durable>true</durable>
       <recover>true</recover>
     </job>
-    <!--<trigger>
-      <simple>
-        <name>countries-trigger</name>
-        <job-name>countries</job-name>
-        <repeat-count>-1</repeat-count>
-        <repeat-interval>60000</repeat-interval>
-      </simple>
-    </trigger>-->
+    <job>
+      <name>matches-job</name>
+      <job-type>FWCB2014.Import.Runner.Jobs.MatchesJob, FWCB2014.Import.Runner</job-type>
+      <durable>true</durable>
+      <recover>true</recover>
+    </job>
     <trigger>
       <simple>
-        <name>matches-trigger</name>
-        <job-name>matches</job-name>
+        <name>standings-trigger</name>
+        <job-name>standings-job</job-name>
+        <start-time-seconds-in-future>1</start-time-seconds-in-future>
         <repeat-count>-1</repeat-count>
-        <repeat-interval>10000</repeat-interval>
+        <repeat-interval>5000</repeat-interval>
       </simple>
     </trigger>
     <trigger>
       <simple>
-        <name>standings-trigger</name>
-        <job-name>standings</job-name>
+        <name>matches-trigger</name>
+        <job-name>matches-job</job-name>
+        <start-time-seconds-in-future>2</start-time-seconds-in-future>
         <repeat-count>-1</repeat-count>
-        <repeat-interval>10000</repeat-interval>
+        <repeat-interval>5000</repeat-interval>
       </simple>
     </trigger>
   </schedule>

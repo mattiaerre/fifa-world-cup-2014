@@ -2,11 +2,11 @@
 
 namespace FWCB2014.Import.Runner.Jobs
 {
-    public class MatchesJob : JobBase
+  public class MatchesJob : JobBase
+  {
+    public MatchesJob(IImport import)
+      : base(import, "matches")
     {
-        public MatchesJob(IImport import)
-            : base(import, "matches")
-        {
-        }
     }
+  }
 }

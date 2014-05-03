@@ -2,11 +2,11 @@
 
 namespace FWCB2014.Import.Runner.Jobs
 {
-    public class CountriesJob : JobBase
+  public class CountriesJob : JobBase
+  {
+    public CountriesJob(ICountriesImportService service)
+      : base(service, "countries and mapping")
     {
-        public CountriesJob(ICountriesImportService service)
-            : base(service, "countries and mapping")
-        {
-        }
     }
+  }
 }
