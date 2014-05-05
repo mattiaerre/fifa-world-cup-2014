@@ -24,7 +24,7 @@
         <job-name>standings-job</job-name>
         <start-time-seconds-in-future>1</start-time-seconds-in-future>
         <repeat-count>-1</repeat-count>
-        <repeat-interval>5000</repeat-interval>
+        <repeat-interval>60000</repeat-interval>
       </simple>
     </trigger>
     <trigger>
@@ -33,7 +33,7 @@
         <job-name>matches-job</job-name>
         <start-time-seconds-in-future>2</start-time-seconds-in-future>
         <repeat-count>-1</repeat-count>
-        <repeat-interval>5000</repeat-interval>
+        <repeat-interval>60000</repeat-interval>
       </simple>
     </trigger>
   </schedule>

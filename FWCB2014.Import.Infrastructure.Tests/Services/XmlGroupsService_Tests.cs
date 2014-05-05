@@ -1,4 +1,5 @@
-﻿using FWCB2014.Domain.Core.Models;
+﻿using System;
+using FWCB2014.Domain.Core.Models;
 using FWCB2014.Domain.Core.Models.Command.Standings;
 using FWCB2014.Domain.Core.Services;
 using FWCB2014.Import.Infrastructure.Services;
@@ -11,6 +12,7 @@ using System.Xml.Linq;
 
 namespace FWCB2014.Import.Infrastructure.Tests.Services
 {
+  [Obsolete("Use the StandingsImportService instead", true)]
   [TestFixture]
   public class XmlGroupsService_Tests
   {
@@ -19,7 +21,7 @@ namespace FWCB2014.Import.Infrastructure.Tests.Services
     [SetUp]
     public void Given_An_XmlGroupsService()
     {
-        var feed = XElement.Load(string.Format("{0}{1}", Settings.Default.SyndicationRoot, @"\App_Data\Standings_20140405.xml"));
+      var feed = XElement.Load(string.Format("{0}{1}", Settings.Default.SyndicationRoot, @"\App_Data\Standings_20140405.xml"));
       _service = new XmlGroupsService(feed);
     }
 

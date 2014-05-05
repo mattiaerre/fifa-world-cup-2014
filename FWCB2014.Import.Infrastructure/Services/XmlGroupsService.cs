@@ -8,6 +8,7 @@ using System.Xml.Linq;
 
 namespace FWCB2014.Import.Infrastructure.Services
 {
+  [Obsolete("Use the StandingsImportService instead", true)]
   public class XmlGroupsService : IGroupsService<GroupModel<StandingModel>>
   {
     private readonly XElement _feed;

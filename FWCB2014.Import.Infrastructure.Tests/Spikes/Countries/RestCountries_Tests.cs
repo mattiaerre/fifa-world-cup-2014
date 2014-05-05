@@ -62,7 +62,7 @@ namespace FWCB2014.Import.Infrastructure.Tests.Spikes.Countries
 
     private static void SerializeAndSave(object data, string fileNamePrefix, bool withVersion)
     {
-      var json = JsonConvert.SerializeObject(data);
+      var json = JsonConvert.SerializeObject(data, Formatting.Indented);
 
       File.WriteAllText(string.Format(@"C:\Users\mattiaerre\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web\App_Data\{0}{1}.json",
         fileNamePrefix,

@@ -1,1 +1,130 @@
-[{"Key":"001","Value":"BRA"},{"Key":"eng_int","Value":"ENG"}]
+[
+  {
+    "Key": "alg_int",
+    "Value": "DZA"
+  },
+  {
+    "Key": "arg_int",
+    "Value": "ARG"
+  },
+  {
+    "Key": "aus_int",
+    "Value": "AUS"
+  },
+  {
+    "Key": "bel_int",
+    "Value": "BEL"
+  },
+  {
+    "Key": "bos_int",
+    "Value": "BIH"
+  },
+  {
+    "Key": "bra_int",
+    "Value": "BRA"
+  },
+  {
+    "Key": "cam_int",
+    "Value": "CMR"
+  },
+  {
+    "Key": "chil_int",
+    "Value": "CHL"
+  },
+  {
+    "Key": "colomb_int",
+    "Value": "COL"
+  },
+  {
+    "Key": "costric_int",
+    "Value": "CRI"
+  },
+  {
+    "Key": "cro_int",
+    "Value": "HRV"
+  },
+  {
+    "Key": "ecuad_int",
+    "Value": "ECU"
+  },
+  {
+    "Key": "eng_int",
+    "Value": "ENG"
+  },
+  {
+    "Key": "fra_int",
+    "Value": "FRA"
+  },
+  {
+    "Key": "ger_int",
+    "Value": "DEU"
+  },
+  {
+    "Key": "gha_int",
+    "Value": "GHA"
+  },
+  {
+    "Key": "gre_int",
+    "Value": "GRC"
+  },
+  {
+    "Key": "hond_int",
+    "Value": "HND"
+  },
+  {
+    "Key": "iran_int",
+    "Value": "IRN"
+  },
+  {
+    "Key": "ita_int",
+    "Value": "ITA"
+  },
+  {
+    "Key": "ivoc_int",
+    "Value": "CIV"
+  },
+  {
+    "Key": "jap_int",
+    "Value": "JPN"
+  },
+  {
+    "Key": "korr_int",
+    "Value": "KOR"
+  },
+  {
+    "Key": "mex_int",
+    "Value": "MEX"
+  },
+  {
+    "Key": "ned_int",
+    "Value": "NLD"
+  },
+  {
+    "Key": "nig_int",
+    "Value": "NGA"
+  },
+  {
+    "Key": "por_int",
+    "Value": "PRT"
+  },
+  {
+    "Key": "rus_int",
+    "Value": "RUS"
+  },
+  {
+    "Key": "spa_int",
+    "Value": "ESP"
+  },
+  {
+    "Key": "swi_int",
+    "Value": "CHE"
+  },
+  {
+    "Key": "uru_int",
+    "Value": "URY"
+  },
+  {
+    "Key": "usa_int",
+    "Value": "USA"
+  }
+]
