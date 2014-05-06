@@ -30,7 +30,7 @@ namespace FWCB2014.Import.Infrastructure.Services
       var data = new { version = version, data = list };
 
       // save
-      IoHelper.SerializeAndSave(data, _basePath, "Standings", false);
+      IoHelper.SerializeAndSave(list, _basePath, "Standings", false);
     }
 
     private static IEnumerable<StandingModel> GetStandings(XContainer feed)

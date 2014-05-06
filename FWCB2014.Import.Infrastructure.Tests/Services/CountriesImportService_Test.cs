@@ -25,6 +25,7 @@ namespace FWCB2014.Import.Infrastructure.Tests.Services
         }
 
         [Test]
+        [Explicit]
         public void It_Should_Be_Able_To_Import_One_Country()
         {
             _service.Import();

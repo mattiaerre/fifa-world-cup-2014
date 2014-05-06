@@ -4,7 +4,7 @@ using FWCB2014.Domain.Core.Models;
 
 namespace FWCB2014.Domain.Core.Services
 {
-  [Obsolete("try to use a repository instead", false)]
+  [Obsolete("try to use a repository instead", true)]
   public interface IMatchesService<out T> where T : MatchModelBase
   {
     IEnumerable<T> GetAll();

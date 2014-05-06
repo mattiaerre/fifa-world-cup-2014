@@ -9,20 +9,21 @@ using FWCB2014.Domain.Core.Services;
 
 namespace FWCB2014.Syndication.Infrastructure.Services
 {
-  public class JsonMatchesService : IMatchesService<MatchModel>
-  {
-    private readonly string _jsonPath;
-    //private readonly IRepository<TeamModel> _repository;
-
-    public JsonMatchesService(string jsonPath) //, IRepository<TeamModel> repository)
+    [Obsolete("try to use a repository instead", false)]
+    public class JsonMatchesService : IMatchesService<MatchModel>
     {
-      _jsonPath = jsonPath;
-      //_repository = repository;
-    }
+        private readonly string _jsonPath;
+        //private readonly IRepository<TeamModel> _repository;
 
-    public IEnumerable<MatchModel> GetAll()
-    {
-      throw new NotImplementedException();
+        public JsonMatchesService(string jsonPath) //, IRepository<TeamModel> repository)
+        {
+            _jsonPath = jsonPath;
+            //_repository = repository;
+        }
+
+        public IEnumerable<MatchModel> GetAll()
+        {
+            throw new NotImplementedException();
+        }
     }
-  }
 }

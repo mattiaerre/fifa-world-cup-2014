@@ -3,7 +3,7 @@ using Castle.MicroKernel.Resolvers.SpecializedResolvers;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
 using FWCB2014.Domain.Core.Models;
-using FWCB2014.Domain.Core.Models.Query.Standings;
+using FWCB2014.Domain.Core.Models.Query.Groups;
 using FWCB2014.Domain.Core.Repositories;
 using FWCB2014.Domain.Core.Services;
 using FWCB2014.Domain.Infrastructure.Repositories;
@@ -54,8 +54,10 @@ namespace FWCB2014.Syndication.Web
         .DependsOn(new { jsonPath = Server.MapPath(@"~/App_Data/Countries.json") })
         .LifestyleSingleton());
 
-      _container.Register(
-        Component.For<IGroupsService<GroupModel<StandingModel>>>().ImplementedBy<JsonGroupsService>().DependsOn(new { jsonPath = Server.MapPath(@"~/App_Data/Groups.json"), }));
+      //_container.Register(
+      //  Component.For<IGroupsService<GroupModel<StandingModel>>>()
+      //  .ImplementedBy<JsonGroupsService>()
+      //  .DependsOn(new { jsonPath = Server.MapPath(@"~/App_Data/Groups.json"), }));
     }
 
     protected void Application_End()

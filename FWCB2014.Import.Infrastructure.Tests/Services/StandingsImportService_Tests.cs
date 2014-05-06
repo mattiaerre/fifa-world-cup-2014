@@ -4,22 +4,23 @@ using NUnit.Framework;
 
 namespace FWCB2014.Import.Infrastructure.Tests.Services
 {
-  [TestFixture]
-  public class StandingsImportService_Tests : Base_Tests
-  {
-    private IStandingsImportService _service;
-
-    [SetUp]
-    public void Given_A_StandingsImportService()
+    [TestFixture]
+    public class StandingsImportService_Tests : Base_Tests
     {
-      var feedUri =  string.Format("http://api.xmlscores.com/standings/?f=xml&c=wc_2014&open={0}", ApiKey);
-      _service = new StandingsImportService(feedUri, SyndicationAppDataPath);
-    }
+        private IStandingsImportService _service;
 
-    [Test]
-    public void Do_Import()
-    {
-      _service.Import();
+        [SetUp]
+        public void Given_A_StandingsImportService()
+        {
+            var feedUri = string.Format("http://api.xmlscores.com/standings/?f=xml&c=wc_2014&open={0}", ApiKey);
+            _service = new StandingsImportService(feedUri, SyndicationAppDataPath);
+        }
+
+        [Test]
+        [Explicit]
+        public void Do_Import()
+        {
+            _service.Import();
+        }
     }
-  }
 }

@@ -50,9 +50,10 @@
     <Compile Include="Models\Command\Matches\MatchStatus.cs" />
     <Compile Include="Models\ISeasonCode.cs" />
     <Compile Include="Models\ITeamId.cs" />
+    <Compile Include="Models\Query\Groups\GroupModel.cs" />
     <Compile Include="Models\Query\Matches\MatchModel.cs" />
-    <Compile Include="Models\Query\Standings\StandingModel.cs" />
-    <Compile Include="Models\Query\Standings\TeamModel.cs" />
+    <Compile Include="Models\Query\Groups\StandingModel.cs" />
+    <Compile Include="Models\Query\Groups\TeamModel.cs" />
     <Compile Include="Models\StandingModelBase.cs" />
     <Compile Include="Models\GroupModel.cs" />
     <Compile Include="Models\Command\Standings\StandingModel.cs" />
