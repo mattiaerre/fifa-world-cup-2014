@@ -27,7 +27,7 @@
         <repeat-interval>60000</repeat-interval>
       </simple>
     </trigger>
-    <trigger>
+    <!--<trigger>
       <simple>
         <name>matches-trigger</name>
         <job-name>matches-job</job-name>
@@ -35,6 +35,6 @@
         <repeat-count>-1</repeat-count>
         <repeat-interval>60000</repeat-interval>
       </simple>
-    </trigger>
+    </trigger>-->
   </schedule>
 </job-scheduling-data>

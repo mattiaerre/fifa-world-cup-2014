@@ -55,6 +55,10 @@
       <Project>{a23a6819-47f2-4b95-b94e-0f63f248fe98}</Project>
       <Name>FWCB2014.Domain.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FWCB2014.Domain.Infrastructure.Tests\FWCB2014.Domain.Infrastructure.Tests.csproj">
+      <Project>{6c8e18c6-ff7b-44c3-8772-3fc5e7fa9570}</Project>
+      <Name>FWCB2014.Domain.Infrastructure.Tests</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FWCB2014.Domain.Infrastructure\FWCB2014.Domain.Infrastructure.csproj">
       <Project>{e5a271f6-0ddb-4ae5-9d46-434f9f3ab478}</Project>
       <Name>FWCB2014.Domain.Infrastructure</Name>

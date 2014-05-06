@@ -4,7 +4,7 @@ namespace FWCB2014.Import.Runner.Jobs
 {
   public class StandingsJob : JobBase
   {
-    public StandingsJob(IImport import)
+    public StandingsJob(IStandingsImportService import)
       : base(import, "standings")
     {
     }

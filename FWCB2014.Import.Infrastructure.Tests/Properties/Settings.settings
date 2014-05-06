@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="SyndicationRoot" Type="System.String" Scope="User">
-      <Value Profile="(Default)">D:\Users\mattia\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web</Value>
+      <Value Profile="(Default)">C:\Users\mattiaerre\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web</Value>
     </Setting>
     <Setting Name="InfrastructureRoot" Type="System.String" Scope="User">
       <Value Profile="(Default)">D:\Users\mattia\Source\Repos\fifa-world-cup-2014\FWCB2014.Import.Infrastructure.Tests</Value>
