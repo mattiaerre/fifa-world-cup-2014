@@ -54,8 +54,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\GroupsRepository.cs" />
-    <Compile Include="Services\JsonMatchesService.cs" />
-    <Compile Include="Services\JsonGroupsService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FWCB2014.Domain.Core\FWCB2014.Domain.Core.csproj">

@@ -48,7 +48,7 @@
     <Compile Include="Helpers\HttpHelper.cs" />
     <Compile Include="Helpers\IoHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\JsonCountryRepository.cs" />
+    <Compile Include="Repositories\CountryRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FWCB2014.Domain.Core\FWCB2014.Domain.Core.csproj">

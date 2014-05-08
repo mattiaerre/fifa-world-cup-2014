@@ -17,57 +17,56 @@ using WebApiContrib.IoC.CastleWindsor;
 
 namespace FWCB2014.Syndication.Web
 {
-    public class WebApiApplication : HttpApplication
+  public class WebApiApplication : HttpApplication
+  {
+    private static IWindsorContainer _container;
+
+    protected void Application_Start()
     {
-        private static IWindsorContainer _container;
+      AreaRegistration.RegisterAllAreas();
+      GlobalConfiguration.Configure(WebApiConfig.Register);
+      FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+      RouteConfig.RegisterRoutes(RouteTable.Routes);
+      BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-        protected void Application_Start()
-        {
-            AreaRegistration.RegisterAllAreas();
-            GlobalConfiguration.Configure(WebApiConfig.Register);
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
-
-            BootstrapContainer(GlobalConfiguration.Configuration);
-        }
-
-        private void BootstrapContainer(HttpConfiguration configuration)
-        {
-            _container = new WindsorContainer().Install(FromAssembly.This());
-
-            var controllerFactory = new WindsorControllerFactory(_container.Kernel);
-            ControllerBuilder.Current.SetControllerFactory(controllerFactory);
-
-            _container.Kernel.Resolver.AddSubResolver(new CollectionResolver(_container.Kernel, true));
-
-            // info: for ApiController
-            var dependencyResolver = new WindsorResolver(_container);
-            configuration.DependencyResolver = dependencyResolver;
-            _container.Register(Classes.FromThisAssembly().BasedOn<ApiController>().LifestyleTransient());
-            // /info: for ApiController
-
-            _container.Register(
-              Component.For<IRepository<CountryModel>>()
-              .ImplementedBy<JsonCountryRepository>()
-              .DependsOn(new { jsonPath = Server.MapPath(@"~/App_Data/Countries.json") })
-              .LifestyleSingleton());
-
-            _container.Register(
-              Component.For<IRepository<GroupModel>>()
-              .ImplementedBy<GroupsRepository>()
-              .DependsOn(new
-              {
-                  countriesJsonPath = Server.MapPath(@"~/App_Data/Countries.json"),
-                  teamCountryMappingJsonPath = Server.MapPath(@"~/App_Data/Team_Country_Mapping.json"),
-                  standingsJsonPath = Server.MapPath(@"~/App_Data/Standings.json"),
-              })
-              .LifestyleSingleton());
-        }
-
-        protected void Application_End()
-        {
-            _container.Dispose();
-        }
+      BootstrapContainer(GlobalConfiguration.Configuration);
     }
+
+    private void BootstrapContainer(HttpConfiguration configuration)
+    {
+      _container = new WindsorContainer().Install(FromAssembly.This());
+
+      var controllerFactory = new WindsorControllerFactory(_container.Kernel);
+      ControllerBuilder.Current.SetControllerFactory(controllerFactory);
+
+      _container.Kernel.Resolver.AddSubResolver(new CollectionResolver(_container.Kernel, true));
+
+      // info: for ApiController
+      var dependencyResolver = new WindsorResolver(_container);
+      configuration.DependencyResolver = dependencyResolver;
+      _container.Register(Classes.FromThisAssembly().BasedOn<ApiController>().LifestyleTransient());
+      // /info: for ApiController
+
+      _container.Register(
+        Component.For<IRepository<CountryModel>>()
+        .ImplementedBy<CountryRepository>()
+        .DependsOn(new { jsonPath = Server.MapPath(@"~/App_Data/Countries.json") })
+        .LifestyleSingleton());
+
+      _container.Register(
+        Component.For<IRepository<GroupModel>>()
+        .ImplementedBy<GroupsRepository>()
+        .DependsOn(new
+        {
+          teamCountryMappingJsonPath = Server.MapPath(@"~/App_Data/Team_Country_Mapping.json"),
+          standingsJsonPath = Server.MapPath(@"~/App_Data/Standings.json"),
+        })
+        .LifestyleSingleton());
+    }
+
+    protected void Application_End()
+    {
+      _container.Dispose();
+    }
+  }
 }

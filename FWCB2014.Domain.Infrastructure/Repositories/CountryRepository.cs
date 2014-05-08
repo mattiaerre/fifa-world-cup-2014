@@ -8,8 +8,7 @@ using System.Linq;
 
 namespace FWCB2014.Domain.Infrastructure.Repositories
 {
-    [Obsolete("this class should be renamed", false)]
-    public class JsonCountryRepository : IRepository<CountryModel>
+    public class CountryRepository : IRepository<CountryModel>
     {
         private readonly string _jsonPath;
 
@@ -31,7 +30,7 @@ namespace FWCB2014.Domain.Infrastructure.Repositories
             return countries;
         }
 
-        public JsonCountryRepository(string jsonPath)
+        public CountryRepository(string jsonPath)
         {
             _jsonPath = jsonPath;
         }

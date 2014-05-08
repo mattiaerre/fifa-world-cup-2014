@@ -46,9 +46,7 @@
   <ItemGroup>
     <Compile Include="Services\StandingsImportService.cs" />
     <Compile Include="Services\CountriesImportService.cs" />
-    <Compile Include="Services\XmlGroupsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\XmlMatchesService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FWCB2014.Domain.Core\FWCB2014.Domain.Core.csproj">

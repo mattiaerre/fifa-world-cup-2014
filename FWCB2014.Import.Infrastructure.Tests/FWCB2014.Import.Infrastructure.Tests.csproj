@@ -81,9 +81,7 @@
     </Compile>
     <Compile Include="Services\CountriesImportService_Test.cs" />
     <Compile Include="Services\StandingsImportService_Tests.cs" />
-    <Compile Include="Services\XmlGroupsService_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\XmlMatchesService_Tests.cs" />
     <Compile Include="Spikes\Azure\Storage\Table\TableService_Test.cs" />
     <Compile Include="Base_Tests.cs" />
     <Compile Include="Spikes\Countries\RestCountries_Tests.cs" />
