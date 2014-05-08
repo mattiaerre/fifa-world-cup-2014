@@ -1,16 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using AutoMapper;
+﻿using AutoMapper;
 using FWCB2014.Domain.Core.Models;
 using FWCB2014.Domain.Core.Models.Query.Groups;
 using FWCB2014.Domain.Core.Repositories;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace FWCB2014.Syndication.Infrastructure.Repositories
 {
     // todo: this class should be optimized
+    // todo: inject country repository ???
     public class GroupsRepository : IRepository<GroupModel>
     {
         private readonly string _countriesJsonPath;
@@ -36,7 +37,7 @@ namespace FWCB2014.Syndication.Infrastructure.Repositories
                 var model = new GroupModel { GroupId = groupId, Standings = GetStandings(@group), };
                 list.Add(model);
             }
-            return list;
+            return list.Where(predicate);
         }
 
         private IEnumerable<StandingModel> GetStandings(IEnumerable<StandingModel> standings)
@@ -55,16 +56,22 @@ namespace FWCB2014.Syndication.Infrastructure.Repositories
             var countriesJson = File.ReadAllText(_countriesJsonPath);
             var countries = JsonConvert.DeserializeObject<IEnumerable<CountryModel>>(countriesJson);
 
-            var teamCountryMappingJson = File.ReadAllText(_teamCountryMappingJsonPath).Replace("Key", "key").Replace("Value", "value");
-            var teamCountryMapping = JsonConvert.DeserializeObject(teamCountryMappingJson);
+            var teamCountryMappingJson = File.ReadAllText(_teamCountryMappingJsonPath);
+            var teamCountryMapping = JsonConvert.DeserializeObject<IEnumerable<KeyValueModel>>(teamCountryMappingJson);
 
-            //var value = teamCountryMapping.First(e => e.Key == teamId).Value;
+            var value = teamCountryMapping.First(e => e.Key == teamId).Value;
 
-            //Mapper.CreateMap<CountryModel, TeamModel>();
-            //var team = Mapper.Map<TeamModel>(countries.First(e => e.Alpha3Code == value));
-            //return team;
+            Mapper.CreateMap<CountryModel, TeamModel>();
+            var team = Mapper.Map<TeamModel>(countries.First(e => e.Alpha3Code == value));
+            team.TeamId = teamId;
+            return team;
+        }
 
-            return null;
+        // info: WTF!
+        private class KeyValueModel
+        {
+            public string Key { get; set; }
+            public string Value { get; set; }
         }
     }
 }

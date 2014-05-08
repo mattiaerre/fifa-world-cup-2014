@@ -1,9 +1,9 @@
 ﻿@{
-  ViewBag.Title = "Groups";
+    ViewBag.Title = "Groups";
 }
 
 <script type="text/javascript">
-  var groupId = '@ViewBag.GroupId';
+    var groupId = '@ViewBag.GroupId';
 </script>
 <script src="~/Scripts/Groups/Index/app.js"></script>
 
@@ -14,40 +14,40 @@
 <div data-bind="template: { name: 'groups-template', foreach: $data }"></div>
 
 <script type="text/html" id="groups-template">
-  <h3>
-    <a href="#" data-bind="attr: {}, text: Name"></a>
-  </h3>
-  <table class="table table-responsive table-bordered table-striped">
-    <thead>
-      <tr>
-        <th>Team</th>
-        <th>P</th>
-        <th>W</th>
-        <th>D</th>
-        <th>L</th>
-        <th>S</th>
-        <th>C</th>
-        <th>P</th>
-      </tr>
-    </thead>
-    <tbody data-bind="template: { name: 'group-template', foreach: Teams }"></tbody>
-    <tfoot></tfoot>
-  </table>
+    <h3>
+        <a href="#" data-bind="attr: {}, text: 'Group ' + GroupId"></a>
+    </h3>
+    <table class="table table-responsive table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Team</th>
+                <th>P</th>
+                <th>W</th>
+                <th>D</th>
+                <th>L</th>
+                <th>S</th>
+                <th>C</th>
+                <th>P</th>
+            </tr>
+        </thead>
+        <tbody data-bind="template: { name: 'group-template', foreach: Standings }"></tbody>
+        <tfoot></tfoot>
+    </table>
 
 </script>
 
 <script type="text/html" id="group-template">
-  <tr>
-    <td>
-      <img src="../../Images/blank.gif" data-bind="attr: { class : 'flag flag-' + Team.Alpha2Code.toLowerCase(), alt : Team.Name }" alt="" />
-      <span data-bind="text: Team.Alpha3Code"></span>
-    </td>
-    <td data-bind="text: Played"></td>
-    <td data-bind="text: Won"></td>
-    <td data-bind="text: Drawn"></td>
-    <td data-bind="text: Lost"></td>
-    <td data-bind="text: Scored"></td>
-    <td data-bind="text: Conceeded"></td>
-    <td data-bind="text: Points"></td>
-  </tr>
+    <tr>
+        <td>
+            <img src="../../Images/blank.gif" data-bind="attr: { class : 'flag flag-' + Team.Alpha2Code.toLowerCase(), alt : Team.Name }" alt="" />
+            <span data-bind="text: Team.Alpha3Code"></span>
+        </td>
+        <td data-bind="text: Played"></td>
+        <td data-bind="text: Won"></td>
+        <td data-bind="text: Drawn"></td>
+        <td data-bind="text: Lost"></td>
+        <td data-bind="text: Scored"></td>
+        <td data-bind="text: Conceeded"></td>
+        <td data-bind="text: Points"></td>
+    </tr>
 </script>

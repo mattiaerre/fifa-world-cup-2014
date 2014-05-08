@@ -8,37 +8,38 @@ using System.Linq;
 
 namespace FWCB2014.Domain.Infrastructure.Repositories
 {
-  public class JsonCountryRepository : IRepository<CountryModel>
-  {
-    private readonly string _jsonPath;
-
-    private IEnumerable<CountryModel> _countries;
-    private IEnumerable<CountryModel> Countries
+    [Obsolete("this class should be renamed", false)]
+    public class JsonCountryRepository : IRepository<CountryModel>
     {
-      get
-      {
-        if (_countries == null)
-          _countries = GetCountries();
-        return _countries;
-      }
-    }
+        private readonly string _jsonPath;
 
-    private IEnumerable<CountryModel> GetCountries()
-    {
-      var json = File.ReadAllText(_jsonPath);
-      var countries = JsonConvert.DeserializeObject<List<CountryModel>>(json);
-      return countries;
-    }
+        private IEnumerable<CountryModel> _countries;
+        private IEnumerable<CountryModel> Countries
+        {
+            get
+            {
+                if (_countries == null)
+                    _countries = GetCountries();
+                return _countries;
+            }
+        }
 
-    public JsonCountryRepository(string jsonPath)
-    {
-      _jsonPath = jsonPath;
-    }
+        private IEnumerable<CountryModel> GetCountries()
+        {
+            var json = File.ReadAllText(_jsonPath);
+            var countries = JsonConvert.DeserializeObject<List<CountryModel>>(json);
+            return countries;
+        }
 
-    public IEnumerable<CountryModel> Find(Func<CountryModel, bool> predicate)
-    {
-      var countries = Countries.Where(predicate);
-      return countries;
+        public JsonCountryRepository(string jsonPath)
+        {
+            _jsonPath = jsonPath;
+        }
+
+        public IEnumerable<CountryModel> Find(Func<CountryModel, bool> predicate)
+        {
+            var countries = Countries.Where(predicate);
+            return countries;
+        }
     }
-  }
 }

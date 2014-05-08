@@ -1,9 +1,8 @@
 var groupId = groupId || '';
 
 $(document).ready(function () {
-    //var url = '/Scripts/Groups/Index/Syndication.Groups.json';
+    //var url = '/Scripts/Groups/Index/Groups.json';
     var url = 'http://fwcb2014-syndication.azurewebsites.net/api/groups';
-
     url = url + '/' + groupId;
 
     toastr.info('url: ' + url);

@@ -195,8 +195,8 @@
     <Content Include="Images\flags\flags.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\Groups\Index\Syndication.Groups.json" />
     <Content Include="Content\toastr.less" />
+    <Content Include="Scripts\Groups\Index\Groups.json" />
     <None Include="Properties\PublishProfiles\FWCB2014.WEB.CLOUD.PRD.pubxml" />
     <None Include="Properties\PublishProfiles\FWCB2014.WEB.LOC.pubxml" />
     <Content Include="Scripts\Groups\Index\app.js.map" />
