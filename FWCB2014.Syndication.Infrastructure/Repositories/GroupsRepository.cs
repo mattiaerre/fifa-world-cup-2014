@@ -53,6 +53,11 @@ namespace FWCB2014.Syndication.Infrastructure.Repositories
       _standingsJsonPath = standingsJsonPath;
     }
 
+    public void Add(IEnumerable<GroupModel> entity)
+    {
+      throw new NotImplementedException();
+    }
+
     public IEnumerable<GroupModel> Find(Func<GroupModel, bool> predicate)
     {
       var groups = Standings.GroupBy(e => e.GroupId);
@@ -65,6 +70,11 @@ namespace FWCB2014.Syndication.Infrastructure.Repositories
         list.Add(model);
       }
       return list.Where(predicate);
+    }
+
+    public void Delete()
+    {
+      throw new NotImplementedException();
     }
 
     private IEnumerable<StandingModel> GetStandings(IEnumerable<StandingModel> standings)

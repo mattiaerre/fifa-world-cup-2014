@@ -10,10 +10,14 @@ namespace FWCB2014.Domain.Infrastructure.Repositories
   {
     protected abstract IEnumerable<CountryModel> Countries { get; }
 
+    public abstract void Add(IEnumerable<CountryModel> models);
+
     public IEnumerable<CountryModel> Find(Func<CountryModel, bool> predicate)
     {
       var countries = Countries.Where(predicate);
       return countries;
     }
+
+    public abstract void Delete();
   }
 }

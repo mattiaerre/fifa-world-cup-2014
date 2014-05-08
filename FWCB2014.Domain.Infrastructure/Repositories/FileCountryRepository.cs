@@ -24,6 +24,16 @@ namespace FWCB2014.Domain.Infrastructure.Repositories
       }
     }
 
+    public override void Add(IEnumerable<CountryModel> models)
+    {
+      throw new System.NotImplementedException();
+    }
+
+    public override void Delete()
+    {
+      throw new System.NotImplementedException();
+    }
+
     public FileCountryRepository(string jsonPath)
     {
       _jsonPath = jsonPath;
