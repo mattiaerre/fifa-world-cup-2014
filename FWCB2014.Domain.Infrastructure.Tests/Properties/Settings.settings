@@ -5,5 +5,14 @@
     <Setting Name="SyndicationRoot" Type="System.String" Scope="User">
       <Value Profile="(Default)">D:\Users\mattia\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web</Value>
     </Setting>
+    <Setting Name="StorageConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DefaultEndpointsProtocol=https;AccountName=portalvhds401dfvvmlwd99;AccountKey=oetli2Cd0JNdvGLKNegp1IpgAsgZUcIU18PwCIUoPhJAgCcHZWf0TYlkJwaglSBCkqrEQ9aiz+EbiTeAt8DNvQ==</Value>
+    </Setting>
+    <Setting Name="CompetitionId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">wc</Value>
+    </Setting>
+    <Setting Name="SeasonId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2014</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

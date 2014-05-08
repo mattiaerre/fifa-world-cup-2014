@@ -13,13 +13,14 @@ namespace FWCB2014.Syndication.Infrastructure.Tests.Repositories
     private IRepository<GroupModel> _repository;
 
     [SetUp]
-    public void Given_A_GroupsRepository()
+    public void Given_A_FileCountryRepository()
     {
       var countriesJsonPath = @"D:\Users\mattia\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web\App_Data\Countries.json";
       var teamCountryMappingJsonPath = @"D:\Users\mattia\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web\App_Data\Team_Country_Mapping.json";
       var standingsJsonPath = @"D:\Users\mattia\Source\Repos\fifa-world-cup-2014\FWCB2014.Syndication.Web\App_Data\Standings.json";
 
-      var repository = new CountryRepository(countriesJsonPath);
+      var repository = new FileCountryRepository(countriesJsonPath);
+      //var repository = new AzureCountryRepository(string.Empty, string.Empty, string.Empty, string.Empty); // todo: !?!
 
       _repository = new GroupsRepository(repository, teamCountryMappingJsonPath, standingsJsonPath);
     }

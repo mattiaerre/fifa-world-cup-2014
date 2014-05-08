@@ -13,6 +13,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using FWCB2014.Syndication.Web.Properties;
 using WebApiContrib.IoC.CastleWindsor;
 
 namespace FWCB2014.Syndication.Web
@@ -47,10 +48,23 @@ namespace FWCB2014.Syndication.Web
       _container.Register(Classes.FromThisAssembly().BasedOn<ApiController>().LifestyleTransient());
       // /info: for ApiController
 
+      //_container.Register(
+      //  Component.For<IRepository<CountryModel>>()
+      //  .ImplementedBy<FileCountryRepository>()
+      //  .DependsOn(new { jsonPath = Server.MapPath(@"~/App_Data/Countries.json") })
+      //  .LifestyleSingleton());
+
+      // string connectionString, string tableName, string partitionKey, string rowKey
       _container.Register(
         Component.For<IRepository<CountryModel>>()
-        .ImplementedBy<CountryRepository>()
-        .DependsOn(new { jsonPath = Server.MapPath(@"~/App_Data/Countries.json") })
+        .ImplementedBy<AzureCountryRepository>()
+        .DependsOn(new
+        {
+          connectionString = Settings.Default.StorageConnectionString,
+          tableName = "countries",
+          partitionKey = "wc",
+          rowKey = "2014",
+        })
         .LifestyleSingleton());
 
       _container.Register(

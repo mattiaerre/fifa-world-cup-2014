@@ -47,5 +47,43 @@ namespace FWCB2014.Import.Infrastructure.Tests.Properties {
                 this["InfrastructureRoot"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("DefaultEndpointsProtocol=https;AccountName=portalvhds401dfvvmlwd99;AccountKey=oet" +
+            "li2Cd0JNdvGLKNegp1IpgAsgZUcIU18PwCIUoPhJAgCcHZWf0TYlkJwaglSBCkqrEQ9aiz+EbiTeAt8D" +
+            "NvQ==")]
+        public string StorageConnectionString {
+            get {
+                return ((string)(this["StorageConnectionString"]));
+            }
+            set {
+                this["StorageConnectionString"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("wc")]
+        public string CompetitionId {
+            get {
+                return ((string)(this["CompetitionId"]));
+            }
+            set {
+                this["CompetitionId"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2014")]
+        public string SeasonId {
+            get {
+                return ((string)(this["SeasonId"]));
+            }
+            set {
+                this["SeasonId"] = value;
+            }
+        }
     }
 }
