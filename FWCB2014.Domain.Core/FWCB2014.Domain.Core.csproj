@@ -59,7 +59,9 @@
     <Compile Include="Models\Command\Standings\StandingModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\IName.cs" />
-    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\IAdd.cs" />
+    <Compile Include="Repositories\IDelete.cs" />
+    <Compile Include="Repositories\IFind.cs" />
     <Compile Include="Models\MatchModelBase.cs" />
   </ItemGroup>
   <ItemGroup />

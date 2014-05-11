@@ -6,11 +6,12 @@ using FWCB2014.Domain.Core.Repositories;
 
 namespace FWCB2014.Domain.Infrastructure.Repositories
 {
-  public abstract class CountryRepositoryBase : IRepository<CountryModel>
+  [Obsolete("every context will use its own implementation of the repositories", true)]
+  public abstract class CountryRepositoryBase : IFind<CountryModel>, IAdd<string>, IDelete
   {
     protected abstract IEnumerable<CountryModel> Countries { get; }
 
-    public abstract void Add(IEnumerable<CountryModel> models);
+    public abstract void Add(string model);
 
     public IEnumerable<CountryModel> Find(Func<CountryModel, bool> predicate)
     {

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using FWCB2014.Domain.Core.Models;
 using FWCB2014.Domain.Core.Models.Query.Groups;
-using FWCB2014.Domain.Core.Repositories;
+using FWCB2014.Syndication.Core.Repositories;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -10,9 +10,9 @@ using System.Linq;
 
 namespace FWCB2014.Syndication.Infrastructure.Repositories
 {
-  public class GroupsRepository : IRepository<GroupModel>
+  public class GroupRepository : IGroupRepository
   {
-    private readonly IRepository<CountryModel> _repository;
+    private readonly ICountryRepository _repository;
     private readonly string _teamCountryMappingJsonPath;
     private readonly string _standingsJsonPath;
 
@@ -38,6 +38,7 @@ namespace FWCB2014.Syndication.Infrastructure.Repositories
       {
         if (_standings == null)
         {
+          // todo: use azure store instead
           var standingsJson = File.ReadAllText(_standingsJsonPath);
           var standings = JsonConvert.DeserializeObject<IEnumerable<StandingModel>>(standingsJson);
           _standings = standings;
@@ -46,16 +47,11 @@ namespace FWCB2014.Syndication.Infrastructure.Repositories
       }
     }
 
-    public GroupsRepository(IRepository<CountryModel> repository, string teamCountryMappingJsonPath, string standingsJsonPath)
+    public GroupRepository(ICountryRepository repository, string teamCountryMappingJsonPath, string standingsJsonPath)
     {
       _repository = repository;
       _teamCountryMappingJsonPath = teamCountryMappingJsonPath;
       _standingsJsonPath = standingsJsonPath;
-    }
-
-    public void Add(IEnumerable<GroupModel> entity)
-    {
-      throw new NotImplementedException();
     }
 
     public IEnumerable<GroupModel> Find(Func<GroupModel, bool> predicate)
@@ -70,11 +66,6 @@ namespace FWCB2014.Syndication.Infrastructure.Repositories
         list.Add(model);
       }
       return list.Where(predicate);
-    }
-
-    public void Delete()
-    {
-      throw new NotImplementedException();
     }
 
     private IEnumerable<StandingModel> GetStandings(IEnumerable<StandingModel> standings)

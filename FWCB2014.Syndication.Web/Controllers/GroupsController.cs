@@ -1,15 +1,15 @@
 ﻿using FWCB2014.Domain.Core.Models.Query.Groups;
+using FWCB2014.Syndication.Core.Repositories;
 using System.Collections.Generic;
 using System.Web.Http;
-using FWCB2014.Domain.Core.Repositories;
 
 namespace FWCB2014.Syndication.Web.Controllers
 {
     public class GroupsController : ApiController
     {
-        private readonly IRepository<GroupModel> _repository;
+      private readonly IGroupRepository _repository;
 
-        public GroupsController(IRepository<GroupModel> repository)
+      public GroupsController(IGroupRepository repository)
         {
             _repository = repository;
         }

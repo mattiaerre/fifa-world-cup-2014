@@ -1,18 +1,17 @@
-﻿using System.Collections.Generic;
-using FWCB2014.Domain.Core.Models;
-using FWCB2014.Domain.Core.Repositories;
-using FWCB2014.Domain.Infrastructure.Entities;
+﻿using FWCB2014.Domain.Infrastructure.Entities;
 using FWCB2014.Domain.Infrastructure.Repositories;
 using Newtonsoft.Json;
 using NUnit.Framework;
+using System;
 
 namespace FWCB2014.Domain.Infrastructure.Tests.Repositories
 {
+  [Obsolete("every context will use its own implementation of the repositories", true)]
   [TestFixture]
   [Explicit]
   public class AzureCountryRepository_Tests
   {
-    private IRepository<CountryModel> _repository;
+    private CountryRepositoryBase _repository;
 
     private const string ConnectionString = "UseDevelopmentStorage=true";
     private const string TableName = "countries";
@@ -30,11 +29,14 @@ namespace FWCB2014.Domain.Infrastructure.Tests.Repositories
     {
       var data = new DataEntity { PartitionKey = PartitionKey, RowKey = RowKey };
       data.Data = JsonConvert.SerializeObject(new { Countries = true });
-      _repository.Add(new List<CountryModel>
-      {
-        new CountryModel { Name = "Bermuda", Alpha2Code = "BM", Alpha3Code = "BMU", },
-        new CountryModel { Name = "Denmark", Alpha2Code = "DK", Alpha3Code = "DNK", },
-      });
+
+      _repository.Add("[TODO]");
+
+      //_repository.Add(new List<CountryModel>
+      //{
+      //  new CountryModel { Name = "Bermuda", Alpha2Code = "BM", Alpha3Code = "BMU", },
+      //  new CountryModel { Name = "Denmark", Alpha2Code = "DK", Alpha3Code = "DNK", },
+      //});
     }
 
     [TearDown]

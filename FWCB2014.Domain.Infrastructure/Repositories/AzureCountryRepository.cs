@@ -1,4 +1,5 @@
-﻿using FWCB2014.Domain.Core.Models;
+﻿using System;
+using FWCB2014.Domain.Core.Models;
 using FWCB2014.Domain.Infrastructure.Entities;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 
 namespace FWCB2014.Domain.Infrastructure.Repositories
 {
+  [Obsolete("every context will use its own implementation of the repositories", true)]
   public class AzureCountryRepository : CountryRepositoryBase
   {
     private readonly string _connectionString;
@@ -24,7 +26,7 @@ namespace FWCB2014.Domain.Infrastructure.Repositories
           var storageAccount = CloudStorageAccount.Parse(_connectionString);
           var tableClient = storageAccount.CreateCloudTableClient();
           var table = tableClient.GetTableReference(_tableName);
-          
+
           var retrieveOperation = TableOperation.Retrieve<DataEntity>(_partitionKey, _rowKey);
           var retrievedResult = table.Execute(retrieveOperation);
 
@@ -36,7 +38,7 @@ namespace FWCB2014.Domain.Infrastructure.Repositories
       }
     }
 
-    public override void Add(IEnumerable<CountryModel> models)
+    public override void Add(string model)
     {
       var storageAccount = CloudStorageAccount.Parse(_connectionString);
       var tableClient = storageAccount.CreateCloudTableClient();
@@ -44,7 +46,7 @@ namespace FWCB2014.Domain.Infrastructure.Repositories
 
       table.CreateIfNotExists();
 
-      var data = new DataEntity { PartitionKey = _partitionKey, RowKey = _rowKey, Data = JsonConvert.SerializeObject(models) };
+      var data = new DataEntity { PartitionKey = _partitionKey, RowKey = _rowKey, Data = model };
 
       var insertOrReplaceOperation = TableOperation.InsertOrReplace(data);
       table.Execute(insertOrReplaceOperation);

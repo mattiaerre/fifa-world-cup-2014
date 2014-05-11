@@ -1,10 +1,12 @@
-﻿using FWCB2014.Domain.Core.Models;
+﻿using System;
+using FWCB2014.Domain.Core.Models;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 
 namespace FWCB2014.Domain.Infrastructure.Repositories
 {
+  [Obsolete("every context will use its own implementation of the repositories", true)]
   public class FileCountryRepository : CountryRepositoryBase
   {
     private readonly string _jsonPath;
@@ -24,7 +26,7 @@ namespace FWCB2014.Domain.Infrastructure.Repositories
       }
     }
 
-    public override void Add(IEnumerable<CountryModel> models)
+    public override void Add(string model)
     {
       throw new System.NotImplementedException();
     }

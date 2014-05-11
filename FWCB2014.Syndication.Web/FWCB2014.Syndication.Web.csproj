@@ -226,6 +226,10 @@
       <Project>{e5a271f6-0ddb-4ae5-9d46-434f9f3ab478}</Project>
       <Name>FWCB2014.Domain.Infrastructure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FWCB2014.Syndication.Core\FWCB2014.Syndication.Core.csproj">
+      <Project>{DA41ACA2-9264-49DF-9ECA-C2D2C3B6CC7F}</Project>
+      <Name>FWCB2014.Syndication.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FWCB2014.Syndication.Infrastructure\FWCB2014.Syndication.Infrastructure.csproj">
       <Project>{c041ecfb-2988-4dde-a494-a6018e4664ec}</Project>
       <Name>FWCB2014.Syndication.Infrastructure</Name>

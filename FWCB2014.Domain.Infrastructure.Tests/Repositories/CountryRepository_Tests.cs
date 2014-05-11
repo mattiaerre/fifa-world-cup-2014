@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using FWCB2014.Domain.Core.Models;
 using FWCB2014.Domain.Infrastructure.Entities;
@@ -12,6 +13,7 @@ using System.IO;
 
 namespace FWCB2014.Domain.Infrastructure.Tests.Repositories
 {
+  [Obsolete("every context will use its own implementation of the repositories", true)]
   [TestFixture]
   [Explicit]
   public class CountryRepository_Tests

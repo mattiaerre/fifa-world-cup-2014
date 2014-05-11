@@ -2,18 +2,15 @@
 using Castle.MicroKernel.Resolvers.SpecializedResolvers;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
-using FWCB2014.Domain.Core.Models;
-using FWCB2014.Domain.Core.Models.Query.Groups;
-using FWCB2014.Domain.Core.Repositories;
-using FWCB2014.Domain.Infrastructure.Repositories;
+using FWCB2014.Syndication.Core.Repositories;
 using FWCB2014.Syndication.Infrastructure.Repositories;
 using FWCB2014.Syndication.Web.Plumbing;
+using FWCB2014.Syndication.Web.Properties;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using FWCB2014.Syndication.Web.Properties;
 using WebApiContrib.IoC.CastleWindsor;
 
 namespace FWCB2014.Syndication.Web
@@ -48,16 +45,9 @@ namespace FWCB2014.Syndication.Web
       _container.Register(Classes.FromThisAssembly().BasedOn<ApiController>().LifestyleTransient());
       // /info: for ApiController
 
-      //_container.Register(
-      //  Component.For<IRepository<CountryModel>>()
-      //  .ImplementedBy<FileCountryRepository>()
-      //  .DependsOn(new { jsonPath = Server.MapPath(@"~/App_Data/Countries.json") })
-      //  .LifestyleSingleton());
-
-      // string connectionString, string tableName, string partitionKey, string rowKey
       _container.Register(
-        Component.For<IRepository<CountryModel>>()
-        .ImplementedBy<AzureCountryRepository>()
+        Component.For<ICountryRepository>()
+        .ImplementedBy<CountryRepository>()
         .DependsOn(new
         {
           connectionString = Settings.Default.StorageConnectionString,
@@ -68,8 +58,8 @@ namespace FWCB2014.Syndication.Web
         .LifestyleSingleton());
 
       _container.Register(
-        Component.For<IRepository<GroupModel>>()
-        .ImplementedBy<GroupsRepository>()
+        Component.For<IGroupRepository>()
+        .ImplementedBy<GroupRepository>()
         .DependsOn(new
         {
           teamCountryMappingJsonPath = Server.MapPath(@"~/App_Data/Team_Country_Mapping.json"),
