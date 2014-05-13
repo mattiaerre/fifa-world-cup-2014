@@ -1,6 +1,9 @@
+using System;
+
 namespace FWCB2014.Domain.Core.Models
 {
-  public class MatchModelBase // todo: see match model in order to get some fields from it
+  [Obsolete("try to use the context specific models", false)]
+  public class MatchModelBase
   {
   }
 }
